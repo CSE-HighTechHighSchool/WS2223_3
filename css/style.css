@@ -1,0 +1,149 @@
+.cover-photo {
+    background-image: 
+}
+
+/* --------------------- Class CSS ------------------------ */
+.about-author{
+    padding-top: 20px;
+}
+
+.author{
+    padding-bottom: 20px;
+    background-color: #bedbf8;
+}
+
+hr{
+    border: 3px solid #000000;
+}
+
+.footer{
+    background-color: #023E8A;
+}
+
+.overview{
+    background-color: #63c1e7;
+}
+
+.chair-resize{
+    width: 550px;
+    border: 10px inset #35aac7;
+    height: auto;
+}
+
+.nav-image{
+    width: 5%;
+    height:auto;
+}
+
+.chair-apparatus {
+    width: 300px;
+    height: auto;
+}
+
+.showcase {
+    background-color: #bccad6;
+}
+
+.icon-white{
+    color: white;
+}
+
+.hypotenuse-img {
+    width: 350px;
+    height:auto;
+}
+
+.chair-tipping-img {
+    padding-top: 10px;
+}
+
+.nb-bg-color {
+    background-color: #023E8A !important;
+}
+
+.chair-apparatus {
+    width: 450px;
+    height: auto;
+}
+
+.seat-depth {
+    padding-top: 25px;
+}
+
+.author-image {
+    width: 635px;
+    padding: 30px; 
+    box-sizing: border-box;
+    border-radius: 50% 20% / 10% 40%;
+    height: 800px;
+}
+
+.procedure-text {
+    font-size: 20px;
+    list-style-type: square;
+    line-height: 2;
+
+}
+
+/* --------------------- ID CSS ------------------------ */
+a#nbMenuItem {
+    font-size:25px;
+    padding-right: 20px;
+    padding-left:20px;
+}
+
+h1#ovPadLeft{
+    padding-left: 20px;
+}
+
+p#ovPadLeft{
+    padding-left: 20px;
+}
+
+h1#ovPadRight{
+    padding-left: 20px;
+}
+
+p#ovPadRight{
+    padding-left: 20px;
+}
+
+#research-title{
+    font-size: 60px;
+}
+
+img#newtons-cradle{
+    width: 10px;
+    height: auto;
+}
+
+#fusion-chair{
+    width: 500px;
+    height: auto;
+    padding-left: 50px;
+}
+
+/* ----------------- Underline Animation CSS -----------------*/
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    /*color: #0087ca;*/
+  }
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #eae6e6;
+    /*transform-origin: bottom right;*/
+    transition: transform 0.35s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    /*transform-origin: bottom left;*/
+}
