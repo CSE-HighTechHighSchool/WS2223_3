@@ -1,5 +1,10 @@
 .cover-photo {
-    background-image: 
+    /* background-image: */
+}
+
+.states-img {
+    height: auto;
+    width: 1000px;
 }
 
 /* --------------------- Class CSS ------------------------ */
@@ -35,10 +40,6 @@ hr{
     height:auto;
 }
 
-.chair-apparatus {
-    width: 300px;
-    height: auto;
-}
 
 .showcase {
     background-color: #bccad6;
