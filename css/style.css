@@ -1,6 +1,6 @@
-.cover-photo {
-    /* background-image: */
-}
+/*.cover-photo {
+    background-image: 
+} */
 
 .states-img {
     height: auto;
@@ -36,39 +36,21 @@ hr{
 }
 
 .nav-image{
-    width: 5%;
+    width: 100%;
     height:auto;
 }
 
 
 .showcase {
-    background-color: #bccad6;
+    background-color: #0b3c68;
 }
 
 .icon-white{
     color: white;
 }
 
-.hypotenuse-img {
-    width: 350px;
-    height:auto;
-}
-
-.chair-tipping-img {
-    padding-top: 10px;
-}
-
 .nb-bg-color {
-    background-color: #023E8A !important;
-}
-
-.chair-apparatus {
-    width: 450px;
-    height: auto;
-}
-
-.seat-depth {
-    padding-top: 25px;
+    background-color: #00439a !important;
 }
 
 .author-image {
@@ -91,6 +73,7 @@ a#nbMenuItem {
     font-size:25px;
     padding-right: 20px;
     padding-left:20px;
+    color: #000000;
 }
 
 h1#ovPadLeft{
@@ -113,11 +96,6 @@ p#ovPadRight{
     font-size: 60px;
 }
 
-img#newtons-cradle{
-    width: 10px;
-    height: auto;
-}
-
 #fusion-chair{
     width: 500px;
     height: auto;
@@ -128,7 +106,7 @@ img#newtons-cradle{
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    /*color: #0087ca;*/
+    color: #0087ca;
   }
   
 .hover-underline-animation:after {
