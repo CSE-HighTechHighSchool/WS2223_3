@@ -29,14 +29,8 @@ hr{
     background-color: #63c1e7;
 }
 
-.chair-resize{
-    width: 550px;
-    border: 10px inset #35aac7;
-    height: auto;
-}
-
 .nav-image{
-    width: 100%;
+    width: 7.5%;
     height:auto;
 }
 
