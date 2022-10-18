@@ -90,16 +90,6 @@ p#ovPadRight{
     padding-left: 20px;
 }
 
-#research-title{
-    font-size: 60px;
-}
-
-#fusion-chair{
-    width: 500px;
-    height: auto;
-    padding-left: 50px;
-}
-
 /* ----------------- Underline Animation CSS -----------------*/
 .hover-underline-animation {
     display: inline-block;
