@@ -39,15 +39,11 @@ hr{
     background-color: #581729;
 }
 
-/*
+
 .main-showcase{
-    background-image: url("/img/states.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 50vw;
 }
-*/
+
 
 
 .icon-white{
@@ -85,8 +81,9 @@ h1#ovPadLeft{
     min-width: 100%; 
     min-height: 100%;
     z-index: -100;
-    background-position: center;
-    background-size: cover;
+    transform: translateX(calc((100% - 100vw) / 2));
+    
+
 
 }
 
@@ -127,26 +124,4 @@ p#ovPadRight{
     /*transform-origin: bottom left;*/
 }
 
-.hover-underline-animation-dropdown {
-    display: inline-block;
-    position: relative;
-    color: #0087ca;
-  }
-
-.hover-underline-animation-dropdown:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    text-decoration-thickness: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #eae6e6;
-    /*transform-origin: bottom right;*/
-    transition: transform 0.35s ease-out;
-}
-
-.hover-underline-animation-dropdown:hover:after {
-    transform: scaleX(1);
-    /*transform-origin: bottom left;*/
-}
+x
