@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark nb-bg-color">
         <div class="container">
             <a href="index.html" class="navbar-brand">
-              <img src="/img/logo.jpg" alt="Fury Logo" class="img-fluid d-inline-block nav-image">
+              <img src="/img/newlogo.jpg" alt="Fury Logo" class="img-fluid d-inline-block nav-image">
             </a>
             
             <!-- Hamburger Menu Button -->
@@ -26,8 +26,15 @@
             <!-- Collapsible navbar menu with custom hover underline CSS animation -->
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                      <a href="teams.html" class="nav-link hover-underline-animation" id="nBMenuItem">About the Teams</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle hover-underline-animation" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      About the Teams
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="765A.html">765A</a>
+                      <a class="dropdown-item" href="765X.html">765X</a>
+                      <a class="dropdown-item" href="765N.html">765N</a>
+                    </div>
                   </li>
                   <li class="nav-item">
                       <a href="game.html" class="nav-link hover-underline-animation" id="nBMenuItem">About VRC Spin Up</a>
