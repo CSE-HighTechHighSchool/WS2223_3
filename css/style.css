@@ -39,15 +39,11 @@ hr{
     background-color: #581729;
 }
 
-/*
+
 .main-showcase{
-    background-image: url("/img/states.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 50vw;
 }
-*/
+
 
 
 .icon-white{
@@ -85,8 +81,9 @@ h1#ovPadLeft{
     min-width: 100%; 
     min-height: 100%;
     z-index: -100;
-    background-position: center;
-    background-size: cover;
+    transform: translateX(calc((100% - 100vw) / 2));
+    
+
 
 }
 
