@@ -66,8 +66,8 @@ hr{
 
 }
 
-.spinup-reveal-video {
-    
+.score-table {
+    background-color: #83223e;
 }
 
 /* --------------------- ID CSS ------------------------ */
@@ -102,6 +102,16 @@ p#ovPadRight{
     width: 500px;
     height: auto;
     padding-left: 50px;
+}
+
+#about-game .accordion-button.collapsed {
+    background-color: #83223e;
+    color: #fff;
+}
+
+#about-game .accordion-collapse {
+    background-color: #751e37;
+    padding: 1rem;
 }
 
 /* ----------------- Underline Animation CSS -----------------*/
