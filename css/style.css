@@ -1,11 +1,8 @@
-/*.cover-photo {
-    background-image: 
-} */
-
-.states-img {
-    height: auto;
-    width: 1100px;
+body, html {
+    height: 100%;
+    margin: 0;
 }
+
 
 /* --------------------- Class CSS ------------------------ */
 .about-author{
@@ -34,35 +31,39 @@ hr{
 }
 
 .nav-image{
-    width: 7.5%;
+    width: 10%;
     height:auto;
 }
-
 
 .showcase {
     background-color: #581729;
 }
 
+/*
+.main-showcase{
+    background-image: url("/img/states.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*/
+
+
 .icon-white{
     color: white;
 }
-
+/*
 .nb-bg-color {
-    background-color: #470d0d !important;
+    background-color: #450d0d !important;
 }
+*/
 
 .author-image {
     width: 400px;
     padding: 30px; 
     box-sizing: border-box;
     height: 400px;
-}
-
-.procedure-text {
-    font-size: 20px;
-    list-style-type: square;
-    line-height: 2;
-
 }
 
 /* --------------------- ID CSS ------------------------ */
@@ -75,6 +76,18 @@ a#nbMenuItem {
 
 h1#ovPadLeft{
     padding-left: 20px;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -100;
+    background-position: center;
+    background-size: cover;
+
 }
 
 p#ovPadLeft{
@@ -110,6 +123,30 @@ p#ovPadRight{
 }
   
 .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    /*transform-origin: bottom left;*/
+}
+
+.hover-underline-animation-dropdown {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+  }
+
+.hover-underline-animation-dropdown:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    text-decoration-thickness: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #eae6e6;
+    /*transform-origin: bottom right;*/
+    transition: transform 0.35s ease-out;
+}
+
+.hover-underline-animation-dropdown:hover:after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
 }
