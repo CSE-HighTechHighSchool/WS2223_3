@@ -19,7 +19,7 @@ body, html {
 }
 
 hr{
-    border: 3px solid #000000;
+    border: 5px solid #000000;
 }
 
 .footer{
@@ -60,11 +60,10 @@ hr{
 */
 
 .author-image {
-    width: 635px;
+    width: 400px;
     padding: 30px; 
     box-sizing: border-box;
-    border-radius: 50% 20% / 10% 40%;
-    height: 800px;
+    height: 400px;
 }
 
 /* --------------------- ID CSS ------------------------ */
