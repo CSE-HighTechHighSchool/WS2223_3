@@ -124,26 +124,4 @@ p#ovPadRight{
     /*transform-origin: bottom left;*/
 }
 
-.hover-underline-animation-dropdown {
-    display: inline-block;
-    position: relative;
-    color: #0087ca;
-  }
-
-.hover-underline-animation-dropdown:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    text-decoration-thickness: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #eae6e6;
-    /*transform-origin: bottom right;*/
-    transition: transform 0.35s ease-out;
-}
-
-.hover-underline-animation-dropdown:hover:after {
-    transform: scaleX(1);
-    /*transform-origin: bottom left;*/
-}
+x
