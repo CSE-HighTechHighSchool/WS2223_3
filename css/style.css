@@ -70,6 +70,7 @@ h1#ovPadLeft{
     left: 50%;
     min-width: 100%; 
     min-height: 100%;
+    max-width: 100vw;
     z-index: -100;
     zoom: 125%;
     /* overflow: hidden;
@@ -93,7 +94,7 @@ p#ovPadRight{
     padding-left: 20px;
 }
 
-/* ----------------- Navigation Bar Animation CSS -----------------*/
+/* ----------------- Shift Navigation Bar Animation -----------------*/
 .shift{
     position:relative;
     z-index: 1;
@@ -129,7 +130,35 @@ p#ovPadRight{
     height: 100%;
   }
 
-/* ----------------- Underline Animation CSS -----------------*/
+/* ----------------- Number Counter Animation -----------------*/
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+  
+.number {
+    animation: counter 5s alternate ease-in-out;
+    counter-reset: num var(--num);
+    font: 800 40px system-ui;
+    padding: 2rem;
+}
+.number::after {
+    content: counter(num);
+}
+  
+@keyframes counter {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 30;
+    }
+}
+  
+
+/* ----------------- Underline Animation CSS -----------------
 .hover-underline-animation {
     display: inline-block;
     position: relative;
@@ -145,12 +174,13 @@ p#ovPadRight{
     bottom: 0;
     left: 0;
     background-color: #eae6e6;
-    /*transform-origin: bottom right;*/
+    transform-origin: bottom right;
     transition: transform 0.35s ease-out;
 }
   
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
-    /*transform-origin: bottom left;*/
 }
+*/
+
 
