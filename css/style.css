@@ -39,28 +39,17 @@ hr{
     background-color: #581729;
 }
 
-
 .main-showcase{
     height: 50vw;
 }
 
-
-
 .icon-white{
     color: white;
 }
-/*
-.nb-bg-color {
-    background-color: #450d0d !important;
-}
-*/
 
-.author-image {
-    width: 400px;
-    padding: 30px; 
-    box-sizing: border-box;
-    height: 400px;
-}
+/* .nav-text {
+    color: #fff;
+} */
 
 /* --------------------- ID CSS ------------------------ */
 a#nbMenuItem {
@@ -75,23 +64,21 @@ h1#ovPadLeft{
 }
 
 #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    left: 0;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 65%;
+    left: 50%;
     min-width: 100%; 
     min-height: 100%;
     z-index: -100;
     zoom: 125%;
-    /*transform: translateX(calc((100% - 100vw) / 2)); */
     /* overflow: hidden;
     object-fit: fill;
     -webkit-filter: blur(15px);
     -moz-filter: blur(15px);
     -o-filter: blur(15px);
     -ms-filter: blur(15px);
-    filter: blur(15px); */
+    filter: blur(15px);  */
 }
 
 p#ovPadLeft{
