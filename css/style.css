@@ -5,21 +5,6 @@ body, html {
 
 
 /* --------------------- Class CSS ------------------------ */
-.about-author{
-    padding-top: 20px;
-}
-
-.author{
-    padding-bottom: 20px;
-    background-color: #bedbf8;
-}
-.author-image{
-    width: 100%;
-    height: 450px;
-    border: 5px solid #000000;
-    
-
-}
 
 .showcasetext {
     color: #fff;
@@ -47,7 +32,7 @@ hr{
 }
 
 .main-showcase{
-    height: 50vw;
+    height: 65vw;
 }
 
 .icon-white{
@@ -65,9 +50,9 @@ a#nbMenuItem {
     padding-left:20px;
     color: #000000;
 }
-.nb-bg-color {
+/* .nb-bg-color {
     background-color: #470d0d;
-}
+} */
 
 h1#ovPadLeft{
     padding-left: 20px;
@@ -76,7 +61,7 @@ h1#ovPadLeft{
 #myVideo {
     transform: translate(-50%, -50%);
     position: absolute;
-    top: 25%;
+    top: 75%;
     left: 50%;
     min-width: 100%; 
     min-height: 100%;
@@ -103,14 +88,71 @@ p#ovPadRight{
     padding-left: 20px;
 }
 
+
+/* .cl-effect-21 a {
+    padding: 10px;
+    color: #237546;
+    font-weight: 700;
+    text-shadow: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+  
+.cl-effect-21 a::before,
+.cl-effect-21 a::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+  
+.cl-effect-21 a::before {
+    top: 0;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+  
+.cl-effect-21 a::after {
+    bottom: 0;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+}
+  
+.cl-effect-21 a:hover,
+.cl-effect-21 a:focus {
+    color: #fff;
+}
+  
+.cl-effect-21 a:hover::before,
+.cl-effect-21 a:focus::before,
+.cl-effect-21 a:hover::after,
+.cl-effect-21 a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+} */
+
 /* ----------------- Shift Navigation Bar Animation -----------------*/
-.shift{
+/* .shift{
     position:relative;
     z-index: 1;
-  }
+}
 .shift:hover {
-    color: #ffffff;
-  }
+    color: #631c1c;
+}
 .shift:after {
     display: block;
     position: absolute;
@@ -127,7 +169,7 @@ p#ovPadRight{
     visibility: none;
     opacity: 0;
     z-index: -1;
-  }
+}
 .shift,
 .shift:after,
 .shift:before {
@@ -136,7 +178,7 @@ p#ovPadRight{
 .shift:hover:after {
     visibility: visible;
     height: 100%;
-  }
+} */
 
 /* ----------------- Number Counter Animation -----------------*/
 
@@ -147,10 +189,11 @@ p#ovPadRight{
 }
   
 .number {
-    animation: counter 5s alternate ease-in-out;
+    animation: counter 3s alternate ease-in-out;
     counter-reset: num var(--num);
     font: 800 40px system-ui;
     padding: 2rem;
+    --num: 30;
 }
 .number::after {
     content: counter(num);
@@ -164,31 +207,5 @@ p#ovPadRight{
       --num: 30;
     }
 }
-  
-
-/* ----------------- Underline Animation CSS -----------------
-.hover-underline-animation {
-    display: inline-block;
-    position: relative;
-    color: #0087ca;
-  }
-  
-.hover-underline-animation:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #eae6e6;
-    transform-origin: bottom right;
-    transition: transform 0.35s ease-out;
-}
-  
-.hover-underline-animation:hover:after {
-    transform: scaleX(1);
-}
-*/
 
 
