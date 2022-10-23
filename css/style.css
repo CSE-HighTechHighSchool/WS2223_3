@@ -48,6 +48,10 @@ hr{
     width: 100%;
 }
 
+.nb-bg-color{
+    background-color: #470d0d;
+}
+
 /* --------------------- ID CSS ------------------------ */
 a#nbMenuItem {
     font-size:25px;
