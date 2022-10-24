@@ -44,6 +44,15 @@ hr{
     color: #fff;
 } */
 
+.author-image {
+    height: 450px;
+    width: 100%;
+}
+
+.nb-bg-color{
+    background-color: #470d0d;
+}
+
 /* --------------------- ID CSS ------------------------ */
 .nb-bg-color {
     background-color: #470d0d;
@@ -87,7 +96,7 @@ hr{
     height: 1px;
     content: '.';
     color: transparent;
-    background: #a44f4f;
+    background: #a54a64;
     visibility: none;
     opacity: 0;
     z-index: -1;
