@@ -112,7 +112,7 @@ hr{
     height: 100%;
 } 
 
-/* ----------------- Number Counter Animation -----------------*/
+/* ----------------- Number Counter Animation for Tournaments Hosted -----------------*/
 
 @property --num {
     syntax: "<integer>";
@@ -123,7 +123,7 @@ hr{
 .number {
     animation: counter 3s alternate ease-in-out;
     counter-reset: num var(--num);
-    font: 800 40px system-ui;
+    font: 800 100px system-ui;
     padding: 2rem;
     --num: 30;
 }
@@ -140,4 +140,105 @@ hr{
     }
 }
 
+/* ----------------- Number Counter Animation for Signature Events -----------------*/
 
+@property --num2 {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+  
+.number2 {
+    animation: counter2 3s alternate ease-in-out;
+    counter-reset: num2 var(--num2);
+    font: 800 100px system-ui;
+    padding: 2rem;
+    --num2: 20;
+}
+.number2::after {
+    content: counter(num2);
+}
+  
+@keyframes counter2 {
+    from {
+      --num2: 0;
+    }
+    to {
+      --num2: 20;
+    }
+}
+
+/* ----------------- Number Counter Animation for State Championships -----------------*/
+
+@property --num3 {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+  
+.number3 {
+    animation: counter3 3s alternate ease-in-out;
+    counter-reset: num3 var(--num3);
+    font: 800 100px system-ui;
+    padding: 2rem;
+    --num3: 15;
+}
+.number3::after {
+    content: counter(num3);
+}
+  
+@keyframes counter3 {
+    from {
+      --num3: 0;
+    }
+    to {
+      --num3: 15;
+    }
+}
+
+/* ----------------- Number Counter Animation for 2019-2020 Tournaments -----------------*/
+
+@property --num4 {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+  
+.number4 {
+    animation: counter4 3s alternate ease-in-out;
+    counter-reset: num4 var(--num4);
+    font: 800 100px system-ui;
+    padding: 2rem;
+    --num4: 45;
+}
+.number4::after {
+    content: counter(num4);
+}
+  
+@keyframes counter4 {
+    from {
+      --num4: 0;
+    }
+    to {
+      --num4: 45;
+    }
+}
+
+
+
+/*------------Results incrementing Numbers Formatting-----*/
+.halfcol {
+    background-color: #581729;
+    float: left;
+    width: 50%;
+    transition: 0.3s;
+    padding: 5px;
+    margin-bottom: 2%;
+  }
+   
+.bigTextContainer h2{
+    font-size: 4vw;
+ }
+ .bigTextContainer h3{
+    font-size: 16vw;
+ }
