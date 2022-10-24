@@ -70,6 +70,15 @@ hr{
     background-color: #83223e;
 }
 
+h1 span.badge {
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.field-point:hover {
+    stroke: blue;
+}
+
 /* --------------------- ID CSS ------------------------ */
 a#nbMenuItem {
     font-size:25px;

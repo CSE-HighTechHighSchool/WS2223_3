@@ -80,18 +80,36 @@
             </p>
           </div>
         </div>
-        <div class="row">
+        <div class="row text-center">
           <hr>
-          <div class="col-md-7">
-            <svg width="100%" height="100%" viewBox="0 0 100 80">
-              <image xlink:href="../img/field_diagram.jpeg" width="100%" height="100%" />
-              <circle cx="70" cy="20" r="2" fill="#33cc33" stroke="black" stroke-width="0.4" class="field-point" field-element="disc" />
-            </svg>
-          </div>
-          <div class="col-md-5 text-center">
-            <h3>View the Field</h3>
+          <h3>View the Field</h3>
+          <div class="row">
+            <div class="col-md-7">
+              <svg width="100%" height="100%" viewBox="0 0 100 80">
+                <image xlink:href="../img/field_diagram.jpeg" width="100%" height="100%" />
+                <circle cx="62%" cy="60.5%" r="2" fill="#33cc33" stroke="black" stroke-width="0.4" class="field-point" data-field-element="disc" />
+                <circle cx="70.5%" cy="25%" r="2" fill="#33cc33" stroke="black" stroke-width="0.4" class="field-point" data-field-element="high-goal" />
+              </svg>
+            </div>
+            <div class="col-md-5 text-center d-flex flex-column justify-content-center">
+              <div id="field-click-message">
+                <h2><em>Click the green dots to explore the Spin Up field!</em></h2>
+              </div>
+              <div id="field-data-elements" style="display:none">
+                <h1><span class="badge bg-danger" id="field-element-title">Disc</span></h1>
+                <h5>About the Element</h5>
+                <p id="field-element-about"></p>
+
+                <h5>How many are there?</h5>
+                <p id="field-element-count"></p>
+
+                <h5>Scoring Value</h5>
+                <p id="field-element-score"></p>
+              </div>
+            </div>
           </div>
         </div>
+        
         <div class="row">
           <hr>
           <h3 class="text-center">More About the Game</h3>
@@ -213,5 +231,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
         crossorigin="anonymous"></script>
+    
+    <script src="../js/fieldDiagram.js"></script>
 </body>
 </html>

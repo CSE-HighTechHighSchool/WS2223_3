@@ -1,0 +1,14 @@
+{
+    "disc": {
+        "field-element-title": "Disc",
+        "field-element-about": "Lorem ipsum dolor sit amet",
+        "field-element-count": "38, plus several preloads and match loads",
+        "field-element-score": "5 points in a high goal, 1 point in a low goal"
+    },
+    "high-goal": {
+        "field-element-title": "High Goal",
+        "field-element-about": "Lorem ipsum high goal",
+        "field-element-count": "2, at opposite corners of the field from each other",
+        "field-element-score": "5 points per disc scored in the goal"
+    }
+}
