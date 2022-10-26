@@ -13,7 +13,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="nb-bg-color navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a href="index.html" class="navbar-brand">
               <img src="/img/logo.png" alt="Fury Logo" class="img-fluid d-inline-block nav-image">
@@ -39,7 +39,7 @@
                     </div>
                   </li>
                   <li class="nav-item shift">
-                      <a href="game.html" class="nav-link" id="nBMenuItem border">About VRC Spin Up</a>
+                      <a href="game.html" class="nav-link border" id="nBMenuItem">About VRC Spin Up</a>
                   </li>
                   <li class="nav-item shift">
                       <a href="results.html" class="nav-link" id="nBMenuItem">Team Results</a>
@@ -56,8 +56,8 @@
           <div class="col-12 p-0 d-flex align-items-center cover-photo"> <!-- Team photo as background -->
             <div class="container">
               <!-- <img class= "img-fluid statesimg" src ="img/states.jpg" alt ="States picture"> -->
-              <h1 class="display-2 showcasetext">765 FuryTech</h1>
-              <h2 class ="showcasetext">High Technology High School VRC Teams</h2>
+              <h1 class="display-2 showcasetext">About VRC Spin Up</h1>
+              <h2 class="showcasetext">2022-23 VRC Game</h2>
               </h2>
             </div>
           </div>
@@ -69,11 +69,168 @@
     </section>
 
     <!-- Overview -->
-    <section class="overview p-2 text-left">
+    <section class="overview p-4 text-left text-light">
       <div class="container">
-        
-      </div>
+        <div class="row d-flex align-items-center">
+          <iframe class="spinup-reveal-video col-lg-5 mb-4" height="315" src="https://www.youtube.com/embed/wIZgvVDZc2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="col-lg-7">
+            <h3>Overview</h3>
+            <p>
+              <strong>VEX Robotics Competition: Spin Up</strong> is the VRC game for the 2022-2023 VRC season.
+              The game involves using a robot to launch discs into a frisbee golf-like goal, while also manipulating cylindrical roller devices on the field and expanding the robot's footprint on the field to score additional points at the end of the match.
+              Matches are played tournament-style, with a preliminary qualification round and a final elimination round.
+            </p>
+            <p>
+              Each head-to-head match begins with an autonomous period, in which robots can score points without human control.
+              The team scoring the most points during this time receives an additional bonus to their final score.
+              Then, robots are controlled by a human driver for the remainder of the match, during which time more points can be scored by launching discs and rolling rollers.
+              During the last 10 seconds of the match, robots can expand in size to touch more of the field, earning extra points.
+              The team with the highest score wins!
+            </p>
+          </div>
+        </div>
+        <div class="row text-center">
+          <hr>
+          <h3>View the Field</h3>
+          <div class="row">
+            <div class="col-md-7">
+              <svg width="100%" height="100%" viewBox="0 0 100 80" class="field-diagram">
+                <image xlink:href="../img/field_diagram.jpeg" width="100%" height="100%" />
+                <circle cx="62%" cy="58%" r="1.5" class="field-point" data-field-element="disc" />
+                <circle cx="72%" cy="27%" r="2" class="field-point" data-field-element="high-goal" />
+                <circle cx="15%" cy="32%" r="3" class="field-point" data-field-element="alliance-station" />
+                <circle cx="38%" cy="65%" r="2" class="field-point" data-field-element="low-goal" />
+                <circle cx="38%" cy="20%" r="1.5" class="field-point" data-field-element="roller" />
+                <circle cx="43%" cy="87%" r="2" class="field-point" data-field-element="net" />
+                <circle cx="50%" cy="50%" r="2" class="field-point" data-field-element="autonomous-line" />
+                <circle cx="76%" cy="53%" r="1.2" class="field-point" data-field-element="loader" />
+              </svg>
+            </div>
+            <div class="col-md-5 text-center d-flex flex-column justify-content-center" class="field-element-data-container">
+              <div id="field-click-message">
+                <h2><em>Click the green dots to explore the Spin Up field!</em></h2>
+              </div>
+              <div id="field-data-elements" style="display:none">
+                <h1 id="field-element-title"></h1>
+                <h5 id="field-element-about-header">About the Element</h5>
+                <p id="field-element-about"></p>
 
+                <h5 id="field-element-count-header">How many are there?</h5>
+                <p id="field-element-count"></p>
+
+                <h5 id="field-element-score-header">Scoring Value</h5>
+                <p id="field-element-score"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <hr>
+          <h3 class="text-center">More About the Game</h3>
+          <div class="accordion icon-white" id="about-game">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="header-object">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info-object" aria-expanded="true" aria-controls="info-object">
+                  The Object
+                </button>
+              </h3>
+              <div class="accordion-collapse collapse" id="info-object" aria-labelledby="header-object" data-bs-parent="#about-game">
+                <p>
+                  Each Spin Up match consists of four teams, split into two alliances (red and blue) of two teams (and therefore, two robots) each.
+                  Each alliance tries to score more points than the other by scoring discs in high and low goals, rotating rollers to match their alliance's color, and expanding their robots in the endgame.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="header-field">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info-field" aria-expanded="true" aria-controls="info-field">
+                  The Field
+                </button>
+              </h3>
+              <div class="accordion-collapse collapse" id="info-field" aria-labelledby="header-field" data-bs-parent="#about-game">
+                <p>
+                  Spin Up is played on a square, 12' x 12' field consisting of a 6 x 6 grid of 2 foot square tiles. A total of 38 small, round, yellow discs are placed in stacks of one or three at designated locations on the field.
+                  In opposite corners of the field, there are raised high goal baskets (one red, one blue), with a square low goal of the opposite color below.
+                  Additionally, mounted on the field walls are four red-and-blue, cylindrical rollers that can be rotated by the robots.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="header-match">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info-match" aria-expanded="true" aria-controls="info-match">
+                  The Match
+                </button>
+              </h3>
+              <div class="accordion-collapse collapse" id="info-match" aria-labelledby="header-match" data-bs-parent="#about-game">
+                <p>
+                  Each head-to-head match begins with a 15 second autonomous period. During this time, the robots can score points while controlling themselves, with no human input whatsoever.
+                  Sensors on the robot and preprogrammed routines are used to make decisions during the autonomous period.
+                  After the autonomous period ends, the field is scored, and the alliance with the most points is awarded an autonomous bonus that will be added to their score at the very end of the match.
+                  Alliances also have the opportunity to earn an "autonomous win point" if they perform certain tasks during the autonomous period. This win point can help teams achieve a higher ranking during the qualification round of the tournament.
+                </p>
+                <p>
+                  After the autonomous bonus is awarded, the match enters into a 1 minute 45 second driver controlled period, in which a human driver controls the robot (with autonomous assistance, if teams so desire).
+                  As with the autonomous period, teams can continue to score discs and rollers during this period.
+                  Discs are scored by picking them up from the field and shooting them into the alliance's high goal, but robots must be careful not to miss, as the disc could fall to the opposing alliance's low goal and score points for them.
+                  Cylindrical rollers can be spun by the robots to match the color of their alliance, also scoring them points.
+                  A variety of strategies can be used during the match to accumulate as many points as possible.
+                </p>
+                <p>
+                  During the last 10 seconds of the driver controlled period, the size limits that previously restricted robots are removed, allowing robots to expand to touch additional tiles on the field and score additional points.
+                  After the match ends, the field is rescored from scratch, and the autonomous bonus is added to the autonomous winner's score. The alliance with the most points wins!
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="header-scoring">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info-scoring" aria-expanded="true" aria-controls="info-scoring">
+                  Scoring
+                </button>
+              </h3>
+              <div class="accordion-collapse collapse" id="info-scoring" aria-labelledby="header-scoring" data-bs-parent="#about-game">
+                <p>
+                  Scoring in Spin Up is fairly straightforward. Point values for each scoreable action are listed below:
+                </p>
+                <table class="table score-table text-light">
+                  <thead>
+                    <tr>
+                      <th>Condition</th>
+                      <th>Point Value</th>
+                    </tr>
+                  </thead>
+                  
+                  <tbody>
+                    <tr>
+                      <td>Disc scored in high goal</td>
+                      <td>5 points</td>
+                    </tr>
+                    <tr>
+                      <td>Disc scored in low goal</td>
+                      <td>1 point</td>
+                    </tr>
+                    <tr>
+                      <td>Robot touching field tile at end of match</td>
+                      <td>3 points (per field tile)</td>
+                    </tr>
+                    <tr>
+                      <td>Roller fully showing alliance color</td>
+                      <td>10 points</td>
+                    </tr>
+                    <tr>
+                      <td>Autonomous bonus</td>
+                      <td>10 points</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -89,5 +246,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
         crossorigin="anonymous"></script>
+    
+    <script src="../js/fieldDiagram.js"></script>
 </body>
 </html>
