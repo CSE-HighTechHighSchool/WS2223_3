@@ -125,7 +125,7 @@ hr{
     counter-reset: num var(--num);
     font: 800 100px system-ui;
     padding: 2rem;
-    --num: 30;
+    --num: 12;
 }
 .number::after {
     content: counter(num);
@@ -136,7 +136,7 @@ hr{
       --num: 0;
     }
     to {
-      --num: 30;
+      --num: 12;
     }
 }
 
@@ -153,7 +153,7 @@ hr{
     counter-reset: num2 var(--num2);
     font: 800 100px system-ui;
     padding: 2rem;
-    --num2: 20;
+    --num2: 11;
 }
 .number2::after {
     content: counter(num2);
@@ -164,7 +164,7 @@ hr{
       --num2: 0;
     }
     to {
-      --num2: 20;
+      --num2: 11;
     }
 }
 
@@ -181,7 +181,7 @@ hr{
     counter-reset: num3 var(--num3);
     font: 800 100px system-ui;
     padding: 2rem;
-    --num3: 15;
+    --num3: 8;
 }
 .number3::after {
     content: counter(num3);
@@ -192,7 +192,7 @@ hr{
       --num3: 0;
     }
     to {
-      --num3: 15;
+      --num3: 8;
     }
 }
 
@@ -209,7 +209,7 @@ hr{
     counter-reset: num4 var(--num4);
     font: 800 100px system-ui;
     padding: 2rem;
-    --num4: 45;
+    --num4: 5;
 }
 .number4::after {
     content: counter(num4);
@@ -220,7 +220,7 @@ hr{
       --num4: 0;
     }
     to {
-      --num4: 45;
+      --num4: 5;
     }
 }
 
@@ -238,6 +238,7 @@ hr{
    
 .bigTextContainer h2{
     font-size: 4vw;
+    color: white;
  }
  .bigTextContainer h3{
     font-size: 16vw;
