@@ -53,6 +53,14 @@ hr{
     background-color: #470d0d;
 }
 
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.dropdown-menu{
+    margin-top: 0;
+}
+
+
 /* --------------------- ID CSS ------------------------ */
 .nb-bg-color {
     background-color: #470d0d;
@@ -104,7 +112,7 @@ hr{
 .shift,
 .shift:after,
 .shift:before {
-    transition: all .5s;
+    transition: all .3s;
   }
 .shift:hover:after {
     opacity: 1;
