@@ -75,8 +75,18 @@ h1 span.badge {
     margin-top: 2rem;
 }
 
+.field-point {
+    fill: hsl(120, 69%, 36%);
+    stroke: black;
+    stroke-width: 0.4;
+}
+
 .field-point:hover {
-    stroke: blue;
+    cursor: help;
+}
+
+.field-diagram {
+    border-radius: 10px;
 }
 
 /* --------------------- ID CSS ------------------------ */
@@ -121,6 +131,12 @@ p#ovPadRight{
 #about-game .accordion-collapse {
     background-color: #751e37;
     padding: 1rem;
+}
+
+#field-element-title {
+    border-radius: 10px;
+    background-color: #751e37;
+    padding: 5px;
 }
 
 /* ----------------- Underline Animation CSS -----------------*/

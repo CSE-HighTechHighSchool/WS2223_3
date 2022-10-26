@@ -10,7 +10,22 @@ fetch('../data/fieldElementData.json')
 
 function updateDataElements(data, fieldElement) {
     Object.entries(data).forEach(([key, val]) => {
-        document.getElementById(key).innerHTML = val;
+        let dataElement = document.getElementById(key);
+        let dataElementHeader;
+        if (key !== "field-element-title") {
+            dataElementHeader = document.getElementById(key + "-header");
+        }
+        
+        if (val !== "") {
+            dataElement.innerHTML = val;
+            dataElement.style.display = "block";
+            try { dataElementHeader.style.display = "block"; } catch {}
+        } else {
+            dataElement.innerHTML = "";
+            dataElement.style.display = "none";
+            try { dataElementHeader.style.display = "none"; } catch {}
+        }
+        
     })
 }
 
