@@ -10,6 +10,10 @@ body, html {
     color: #fff;
 }
 
+.membertext {
+    color: lightcoral;
+}
+
 hr{
     border: 5px solid #000000;
 }
@@ -126,21 +130,8 @@ hr{
     height: 100%;
 } 
 
-/* ----------------- Number Counter Animation for Tournaments Hosted -----------------*/
+/* ----------------- Number Counter Animation for Excellence Awards -----------------*/
 
-@property --num {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
-}
-  
-.number {
-    animation: counter 3s alternate ease-in-out;
-    counter-reset: num var(--num);
-    font: 800 100px system-ui;
-    padding: 2rem;
-    --num: 12;
-}
 .number::after {
     content: counter(num);
 }
@@ -201,23 +192,6 @@ hr{
 
 /* ----------------- Number Counter Animation for Tournaments Hosted -----------------*/
 
-@property --num {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
-}
-  
-.number {
-    animation: counter 3s alternate ease-in-out;
-    counter-reset: num var(--num);
-    font: 800 100px system-ui;
-    padding: 2rem;
-    --num: 12;
-}
-.number::after {
-    content: counter(num);
-}
-
 #myVideo {
     transform: translate(-50%, -50%);
     position: absolute;
@@ -272,7 +246,7 @@ hr{
     height: 100%;
 } 
 
-/* ----------------- Number Counter Animation for Tournaments Hosted -----------------*/
+/* ----------------- Number Counter Animation for Excellence Awards -----------------*/
 
 @property --num {
     syntax: "<integer>";
@@ -285,7 +259,7 @@ hr{
     counter-reset: num var(--num);
     font: 800 100px system-ui;
     padding: 2rem;
-    --num: 30;
+    --num: 12;
 }
 .number::after {
     content: counter(num);
@@ -300,7 +274,7 @@ hr{
     }
 }
 
-/* ----------------- Number Counter Animation for Signature Events -----------------*/
+/* ----------------- Number Counter Animation for Robot Skills Awards -----------------*/
 
 @property --num2 {
     syntax: "<integer>";
@@ -328,7 +302,7 @@ hr{
     }
 }
 
-/* ----------------- Number Counter Animation for State Championships -----------------*/
+/* ----------------- Number Counter Animation for Tournament Champions -----------------*/
 
 @property --num3 {
     syntax: "<integer>";
@@ -356,7 +330,7 @@ hr{
     }
 }
 
-/* ----------------- Number Counter Animation for 2019-2020 Tournaments -----------------*/
+/* ----------------- Number Counter Animation for World's Appearances -----------------*/
 @keyframes counter4 {
     from {
       --num4: 0;
@@ -457,4 +431,5 @@ h1 span.badge {
     transform: scale(1.1);
     border: 5px solid #581729;
     border-radius: 30px;
+    color: white;
 }
