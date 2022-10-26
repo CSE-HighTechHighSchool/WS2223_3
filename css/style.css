@@ -243,3 +243,8 @@ hr{
  .bigTextContainer h3{
     font-size: 16vw;
  }
+
+ /*---------Member Picture Hover------*/
+ .hover-scale:hover {
+    transform: scale(1.1);
+}
