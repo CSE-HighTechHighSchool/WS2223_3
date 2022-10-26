@@ -9,43 +9,45 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark nb-bg-color">
-    <div class="container">
-        <a href="/index.html" class="navbar-brand">
-          <img src="img/logo.png" alt="Fury Logo" class="img-fluid d-inline-block nav-image">
-        </a>
-        
-        <!-- Hamburger Menu Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"> 
-          <span class="navbar-toggler-icon"> </span>
-        </button>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+              <img src="/img/logo.png" alt="Fury Logo" class="img-fluid d-inline-block nav-image">
+            </a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"> 
+              <span class="navbar-toggler-icon"> </span>
+            </button>
 
 
-        <!-- Collapsible navbar menu with custom hover underline CSS animation -->
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  About the Teams
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="765A.html">765A</a>
-                  <a class="dropdown-item" href="765X.html">765X</a>
-                  <a class="dropdown-item" href="765N.html">765N</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                  <a href="game.html" class="nav-link hover-underline-animation" id="nBMenuItem">About VRC Spin Up</a>
-              </li>
-              <li class="nav-item">
-                  <a href="results.html" class="nav-link hover-underline-animation" id="nBMenuItem">Team Results</a>
-              </li>
-          </ul>
-      </div>
-    </div>
-</nav>
+            <!-- Collapsible navbar menu with custom hover underline CSS animation -->
+            <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+              <ul class="navbar-nav ms-auto new-nav">
+                  <li class="nav-item dropdown shift drop-hover">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      About the Teams
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item shift" href="765A.html">765A</a>
+                      <a class="dropdown-item shift" href="765X.html">765X</a>
+                      <a class="dropdown-item shift" href="765N.html">765N</a>
+                    </div>
+                  </li>
+                  <li class="nav-item shift">
+                      <a href="game.html" class="nav-link" id="nBMenuItem">About VRC Spin Up</a>
+                  </li>
+                  <li class="nav-item shift">
+                      <a href="results.html" class="nav-link" id="nBMenuItem">Team Results</a>
+                  </li>
+              </ul>
+          </div>
+        </div>
+    </nav>
     
 
     <!--Picture of 765N Robot-->
