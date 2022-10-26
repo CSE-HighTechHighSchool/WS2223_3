@@ -1,0 +1,50 @@
+{
+    "disc": {
+        "field-element-title": "Disc",
+        "field-element-about": "A small, frisbee-like object that can be collected and launched by robots into the high and low goals to score points",
+        "field-element-count": "38, plus several preloads and match loads",
+        "field-element-score": "5 points in a high goal, 1 point in a low goal"
+    },
+    "high-goal": {
+        "field-element-title": "High Goal",
+        "field-element-about": "A disc golf-like goal with a basket into which robots can launch discs to score points",
+        "field-element-count": "2, at opposite corners of the field from each other",
+        "field-element-score": "5 points per disc scored in the goal"
+    },
+    "net": {
+        "field-element-title": "Net",
+        "field-element-about": "Covers the corners of the field with high goals, stopping discs launched unsuccessfully from leaving the field",
+        "field-element-count": "2: one behind each high goal",
+        "field-element-score": ""
+    },
+    "roller": {
+        "field-element-title": "Roller",
+        "field-element-about": "A cylindrical red-and-blue PVC pipe that can be rotated by the robots &ndash; when the top of the roller shows a single color, the roller is considered \"owned\" by that alliance",
+        "field-element-count": "4: two near each corner of the field not occupied by a high goal",
+        "field-element-score": "10 points per owned roller" 
+    },
+    "alliance-station": {
+        "field-element-title": "Alliance Station",
+        "field-element-about": "The area on the side of the field where from which each alliance controls their robots remotely",
+        "field-element-count": "2: one for each alliance",
+        "field-element-score": ""
+    },
+    "low-goal": {
+        "field-element-title": "Low Goal",
+        "field-element-about": "A square, 4' x 4' region below each high goal &ndash; discs that miss one alliance's high goal and land here will score points for the <em>opposite</em> alliance!",
+        "field-element-count": "2: one below each high goal",
+        "field-element-score": "1 point per disc scored in the goal"
+    },
+    "loader": {
+        "field-element-title": "Loader",
+        "field-element-about": "A small metal tray from which match load discs &ndash; each alliance gets 7 &ndash; can be pushed into the field during the match for robots to collect",
+        "field-element-count": "2: one for each alliance",
+        "field-element-score": ""
+    },
+    "autonomous-line": {
+        "field-element-title": "Autonomous Line",
+        "field-element-about": "A solid double line running diagonally across the field &ndash; robots cannot cross this line and must remain on their starting side during the autonomous period",
+        "field-element-count": "One set of lines",
+        "field-element-score": ""
+    }
+}
