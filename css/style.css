@@ -47,6 +47,8 @@ hr{
 .author-image {
     height: 450px;
     width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 .nb-bg-color{
@@ -58,6 +60,10 @@ hr{
 }
 .dropdown-menu{
     margin-top: 0;
+}
+
+.card {
+    border: 0px;
 }
 
 
@@ -255,4 +261,6 @@ hr{
  /*---------Member Picture Hover------*/
  .hover-scale:hover {
     transform: scale(1.1);
+    border: 5px solid #581729;
+    border-radius: 30px;
 }
