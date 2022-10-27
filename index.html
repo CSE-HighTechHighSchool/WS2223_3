@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -52,14 +53,15 @@
     <!-- Showcase -->
     <section class="main-showcase text-center p-2">
       <div class="container">
-        <video autoplay muted loop id="myVideo">
+        <video autoplay muted loop class="fury-animation" id="myVideo">
           <source src="/vid/furyanimation.mp4" type="video/mp4">
         </video>
         <div class="row">
-          <div class="col-12 p-0 d-flex align-items-center"> <!-- Team photo as background -->
+          <div class="col-12 p-0 d-flex align-items-center"> 
             <div class="container">
-              <!-- <h1 class="display-2 showcasetext">Welcome</h1>
-              <h2 class ="showcasetext">High Technology High School VRC Teams</h2> --> 
+              <div id="text-animation">
+              </div>
+              <span id="typed"></span>
             </div>
           </div>
         </div>
@@ -79,8 +81,7 @@
       </div>
 
     </section>
-
-
+    
     <!-- Footer -->
     <footer class="p-5 footer text-light text-center position-relative">
       <div class="container">
