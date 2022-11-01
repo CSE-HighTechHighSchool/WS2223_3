@@ -1,5 +1,5 @@
 var fieldElementData;
-fetch('../data/fieldElementData.json')
+fetch('data/fieldElementData.json')
     .then(response => response.json())
     .then(data => {fieldElementData = data;})
     .then(promise => {
