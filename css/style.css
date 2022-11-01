@@ -49,10 +49,12 @@ hr{
 } */
 
 .author-image {
-    height: 450px;
+    height: 70vh;
+    max-height: 40vw;
     width: 100%;
     border-radius: 25px;
     overflow: hidden;
+    object-fit: cover;
 }
 
 .nb-bg-color{
