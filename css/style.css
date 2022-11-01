@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
 body, html {
     height: 100%;
     margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 
@@ -49,10 +52,12 @@ hr{
 } */
 
 .author-image {
-    height: 450px;
+    height: 70vh;
+    max-height: 40vw;
     width: 100%;
     border-radius: 25px;
     overflow: hidden;
+    object-fit: cover;
 }
 
 .nb-bg-color{
@@ -386,6 +391,32 @@ hr{
  .bigTextContainer h3{
     font-size: 16vw;
  }
+
+/* ----------------- Results Counts and Bar ----------------- */
+.results-number {
+    font-size: 5rem;
+    display: inline;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #7c253e;
+}
+
+.results-bar {
+    width: 75%;
+    margin: auto;
+    border: 5px solid black;
+    border-radius: 30px;
+}
+
+.bar-maroon {
+    background-color: #7c253e;
+    height: 100%;
+}
+
+.bar-gray {
+    background-color: gray;
+    height: 100%;
+}
 
 /* ----------------- Spin Up Field Diagram -----------------*/
 #about-game .accordion-button.collapsed {
