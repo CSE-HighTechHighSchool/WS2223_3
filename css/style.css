@@ -396,13 +396,22 @@ hr{
     border-radius: 30px;
 }
 
-.bar-maroon {
-    background-color: #7c253e;
+.bar-gradient {
+    background-color: linear-gradient(red, blue, green);
     height: 100%;
+    
 }
 
-.bar-gray {
-    background-color: gray;
+.bar-red {
+    background-color: rgb(221, 18, 18);
+    height: 100%;
+}
+.bar-green {
+    background-color: rgb(23, 212, 64);
+}
+
+.bar-yellow {
+    background-color: lightyellow;
     height: 100%;
 }
 
