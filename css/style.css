@@ -465,15 +465,15 @@ h1 span.badge {
 
 /*---------------------Showcase Text Delete-----------------*/
 
-.text-animation {
+#text-animation {
     color: #fff;
-    padding-top: 250px;
+    padding-top: 400px;
     font-size: 75px;
     display: inline-block;
     z-index: 100;
 }
 
-/* #text-delete {
+#text-delete {
     color: #fff;
     padding-top: 250px;
     font-size: 75px;
@@ -495,7 +495,7 @@ h1 span.badge {
 	50% { 
 		background-color: rgb(255, 255, 255); 
 	}
-} */
+}
 
 .hover-scale:hover {
     border: 5px solid #581729;
