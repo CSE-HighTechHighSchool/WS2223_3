@@ -75,6 +75,11 @@ hr{
     border: 0px;
 }
 
+.gradient {
+    /*background:linear-gradient(rgb(79, 79, 79), #581729);
+    padding: 20px;*/
+}
+
 
 /* --------------------- ID CSS ------------------------ */
 .nb-bg-color {
@@ -502,3 +507,4 @@ h1 span.badge {
     border-radius: 30px;
     color: white;
 }
+
