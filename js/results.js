@@ -1,24 +1,43 @@
-let categories = ['excellence', 'skills', 'champions', 'worlds'];
+let categories = {
+    'excellence': 12,
+    'skills': 11,
+    'champions': 8,
+    'worlds': 5
+}
 let TOTAL_AWARDS = 36;
 
-function updateCategoryProgress(count, category, bar, counter) {
-    bar.ariaValueNow = count;
-    bar.style.width = ((bar.ariaValueMax / TOTAL_AWARDS) * (count / bar.ariaValueMax) * 100) + "%";
-    counter.innerHTML = Math.round(count);
+let time = 0;
+let cumulativeCount = 0;
+let bar = document.getElementById('results-bar-inner');
+let outerBar = document.getElementById('results-bar');
+
+function updateCategoryProgress(barCount, counterCount, category, bar, counter) {
+    bar.ariaValueNow = counterCount;
+    bar.style.width = ((barCount / TOTAL_AWARDS) * 100) + "%";
+    counter.innerHTML = Math.round(counterCount);
+    
+    if (counterCount === categories[category]) {
+        cumulativeCount += categories[category];
+    }
+
+    // readjust the width of the linear gradient
+    bar.style.backgroundSize = outerBar.offsetWidth + "px 100%";
+    console.log(outerBar.offsetWidth)
 }
 
-let time = 0;
 function handleCategoryProgress(category) {
-    let bar = document.getElementById(category + '-bar');
     let counter = document.getElementById(category + '-count');
 
     for (let i = 1; i <= 100; i++) {
         time += 0.06 * (-0.0004 * (i - 50) * (i - 50) + 1);
-        let count = bar.ariaValueMax * 0.01 * i;
+        let count = categories[category] * 0.01 * i;
         setTimeout(() => {
-            updateCategoryProgress(count, category, bar, counter);
+            updateCategoryProgress(cumulativeCount + count, count, category, bar, counter);
         }, time * 1000);
     }
+    setTimeout(() => {
+        bar.style.backgroundSize = "100%"; // set to 100% gradient width once animation finished
+    }, time * 1000)
 }
 
-categories.forEach(handleCategoryProgress);
+Object.keys(categories).forEach(handleCategoryProgress);
