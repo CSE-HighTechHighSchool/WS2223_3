@@ -1,14 +1,17 @@
 var fieldElementData;
+
+// fetch data from json and parse
 fetch('data/fieldElementData.json')
     .then(response => response.json())
     .then(data => {fieldElementData = data;})
     .then(promise => {
         Array.prototype.forEach.call(document.getElementsByClassName('field-point'), element => {
-            element.onclick = changeFieldData;
+            element.onclick = changeFieldData;  // set listener for green dot clicks
         });
     });
 
 function updateDataElements(data, fieldElement) {
+    // set appropriate data for each field
     Object.entries(data).forEach(([key, val]) => {
         let dataElement = document.getElementById(key);
         let dataElementHeader;
@@ -16,6 +19,7 @@ function updateDataElements(data, fieldElement) {
             dataElementHeader = document.getElementById(key + "-header");
         }
         
+        // if the field is blank, hide it
         if (val !== "") {
             dataElement.innerHTML = val;
             dataElement.style.display = "block";
@@ -32,7 +36,7 @@ function updateDataElements(data, fieldElement) {
 function changeFieldData(event) {
     let fieldElement = event.target.dataset.fieldElement;
     
-    // remove message before first click and show data elements
+    // remove page load message and show data elements
     document.getElementById("field-click-message").style.display = "none";
     document.getElementById("field-data-elements").style.display = "block";
 

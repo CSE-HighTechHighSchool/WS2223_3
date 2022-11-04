@@ -1,5 +1,5 @@
 let categories = {
-    'excellence': 12,
+    'excellence': 12,   // number of awards
     'skills': 11,
     'champions': 8,
     'worlds': 5
@@ -12,10 +12,12 @@ let bar = document.getElementById('results-bar-inner');
 let outerBar = document.getElementById('results-bar');
 
 function updateCategoryProgress(barCount, counterCount, category, bar, counter) {
+    // update values on bar and counter
     bar.ariaValueNow = counterCount;
     bar.style.width = ((barCount / TOTAL_AWARDS) * 100) + "%";
     counter.innerHTML = Math.round(counterCount);
     
+    // if at end of category, prepare for next one
     if (counterCount === categories[category]) {
         cumulativeCount += categories[category];
     }
@@ -29,7 +31,7 @@ function handleCategoryProgress(category) {
     let counter = document.getElementById(category + '-count');
 
     for (let i = 1; i <= 100; i++) {
-        time += 0.06 * (-0.0004 * (i - 50) * (i - 50) + 1);
+        time += 0.06 * (-0.0004 * (i - 50) * (i - 50) + 1); // easing function
         let count = categories[category] * 0.01 * i;
         setTimeout(() => {
             updateCategoryProgress(cumulativeCount + count, count, category, bar, counter);

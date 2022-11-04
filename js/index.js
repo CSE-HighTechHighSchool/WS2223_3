@@ -1,4 +1,4 @@
-/* ----------------- Shift hover appears for the dropdown ------------ */
+/* ----------------- Shift hover effect appears for the dropdown ------------ */
 $(document).ready(function(){
     $(".dropdown").hover(function(){
         var dropdownMenu = $(this).children(".dropdown-menu");
