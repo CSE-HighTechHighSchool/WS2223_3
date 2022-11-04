@@ -76,6 +76,11 @@ hr{
     background-color: #470d0d;
 } 
 
+.states-caption {
+    text-align: center;
+    font-size: 25px;
+}
+
 #myVideo {
     /* transform: translate(-50%, -50%); */
     position: absolute;
