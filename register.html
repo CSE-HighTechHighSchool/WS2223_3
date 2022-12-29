@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Bootstrap 5, crypto-js and custom JS script tags-->
     <!-- Include 'defer' keyword for each to improve loading-->
@@ -24,34 +24,45 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark nb-bg-color">
+    <nav class="nb-bg-color navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a href="index.html" class="navbar-brand hover-scale" id = "nBMenuItem">
-                <img src="Pics/Leaf.png" alt ="Back to Overviewt" class = "d-inline-block align-text-top w-25">
+            <a href="index.html" class="navbar-brand">
+              <img src="img/logo.png" alt="Fury Logo" class="img-fluid d-inline-block nav-image">
             </a>
-        <!--Hamburger Menu Button-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"> 
+              <span class="navbar-toggler-icon"> </span>
+            </button>
 
-        <!--Collapsible navbar menu with custom hover underline CSS animation-->
-        <div class="collapse navbar-collapse" id="navmenu">
 
-            <!--Links to hamburger menu button-->
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a href="author.html" class="nav-link hover-underline-animation" id="nBMenuItem">Author</a>
+            <!-- Collapsible navbar menu -->
+            <div class="collapse navbar-collapse " id="navmenu">
+              <ul class="navbar-nav ms-auto new-nav">
+                  <li class="nav-item dropdown shift drop-hover">
+                    <a class="nav-link dropdown-toggle border" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      About the Teams
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item shift" href="765A.html">765A</a>
+                      <a class="dropdown-item shift" href="765X.html">765X</a>
+                      <a class="dropdown-item shift" href="765N.html">765N</a>
+                    </div>
+                  </li>
+                  <li class="nav-item shift">
+                      <a href="game.html" class="nav-link" id="nBMenuItem">About VRC Spin Up</a>
+                  </li>
+                  <li class="nav-item shift">
+                      <a href="results.html" class="nav-link" id="nBMenuItem">Team Results</a>
+                  </li>
+                  <li class="nav-item shift">
+                    <a href="register.html" class="nav-link" id="nBMenuItem">Sign Up</a>
                 </li>
-                <li class="nav-item">
-                    <a href="procedure.html" class="nav-link hover-underline-animation" id="nBMenuItem">Procedure</a>
+                  <li class="nav-item shift">
+                    <a href="signIn.html" class="nav-link" id="nBMenuItem">Sign In</a>
                 </li>
-                <li class="nav-item">
-                    <a href="results.html" class="nav-link hover-underline-animation" id="nBMenuItem">Results</a>
-                </li>
-            </ul>
-
-        </div>
-
+              </ul>
+          </div>
         </div>
     </nav>
 
@@ -65,7 +76,7 @@
             <input type="text" placeholder="First Name" id="firstName" class="form-control mb-3">
             <input type="text" placeholder="Last Name" id="lastName" class="form-control mb-3">
             <input type="email" placeholder="Email" id="userEmail" class="form-control mb-3">
-            <input type="password" placeholder="password" id="userPass" class="form-control mb-3">
+            <input type="password" placeholder="Password" id="userPass" class="form-control mb-3">
             <button type = "button" id="submitData" name="submitData" class="btn btn-outline-primary mb-3 w-100">Register</button>
             <a href="signIn.html" class="badge bg-secondary py-1 w-100">Already have an account?</a>
         </form>

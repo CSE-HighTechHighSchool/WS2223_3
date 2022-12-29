@@ -69,6 +69,12 @@ hr{
 .card {
     border: 0px;
 }
+/*----Firebase Sign in----*/
+.signUpForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /* --------------------- ID CSS ------------------------ */
