@@ -14,22 +14,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <nav class="nb-bg-color navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a href="index.html" class="navbar-brand">
-              <img src="img/logo.png" alt="Fury Logo" class="img-fluid d-inline-block nav-image">
-            </a>
-            
-            <!-- Hamburger Menu Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"> 
-              <span class="navbar-toggler-icon"> </span>
-            </button>
+  <nav class="nb-bg-color navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img src="img/logo.png" alt="Fury Logo" class="img-fluid d-inline-block nav-image">
+        </a>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"> 
+          <span class="navbar-toggler-icon"> </span>
+        </button>
 
 
         <!-- Collapsible navbar menu -->
-        <div class="collapse navbar-collapse" id="navmenu">
-          <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
+        <div class="collapse navbar-collapse " id="navmenu">
+          <ul class="navbar-nav ms-auto new-nav">
+              <li class="nav-item dropdown shift drop-hover">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   About the Teams
                 </a>
@@ -43,12 +43,18 @@
                   <a href="game.html" class="nav-link" id="nBMenuItem">About VRC Spin Up</a>
               </li>
               <li class="nav-item shift">
-                  <a href="results.html" class="nav-link border" id="nBMenuItem ">Team Results</a>
+                  <a href="results.html" class="nav-link border" id="nBMenuItem">Team Results</a>
               </li>
+              <li class="nav-item shift">
+                <a href="register.html" class="nav-link" id="nBMenuItem">Sign Up</a>
+            </li>
+              <li class="nav-item shift">
+                <a href="signIn.html" class="nav-link" id="nBMenuItem">Sign In</a>
+            </li>
           </ul>
       </div>
     </div>
-  </nav>
+</nav>
 
     <section class="overview p-2 text-light">
       <div class="container">
@@ -104,6 +110,7 @@
           </div>
           <div class="col-6">
             <img src="img/divisionfinalist.jpg" alt="Division Finalists" class="img-fluid d-inline-block results-image">
+            <figcaption class="states-caption p-2"><strong>Picture of 2021-2022 765X members</strong></figcaption>
           </div>
         </div>
       </div>
