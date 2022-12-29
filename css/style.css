@@ -69,13 +69,26 @@ hr{
 .card {
     border: 0px;
 }
+
+.border{
+    border: 2px;
+    border-color: #ffffff;
+    border-radius: 10%;
+}
 /*----Firebase Sign in----*/
 .signUpForm{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.register{
+    padding-top: 29px;
+    padding-bottom: 29px;
+}
+.signIn{
+    padding-top: 99px;
+    padding-bottom: 99px;
+}
 
 /* --------------------- ID CSS ------------------------ */
 .nb-bg-color {
@@ -118,6 +131,7 @@ hr{
     text-decoration: underline;
 }
 
+
 /* ----------------- Number Counter Animation for Excellence Awards -----------------*/
 
 .number::after {
@@ -158,6 +172,7 @@ hr{
     opacity: 1;
     visibility: visible;
     height: 100%;
+    border-radius: 10px;
 } 
 
 .hover-scale:hover {
