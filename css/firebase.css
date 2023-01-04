@@ -1,0 +1,28 @@
+.btn-ft {
+    background-color: rgb(167, 64, 64);
+    color: white;
+    border: none;
+}
+
+.btn-ft:hover {
+    background-color:rgb(113, 28, 28)
+}
+
+.form-check-ft {
+    background-color: rgb(167, 64, 64);
+}
+
+.form-check-ft:checked {
+    background-color: rgb(113, 28, 28);
+    border-color: white;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: rgb(167, 64, 64);
+    --bs-btn-active-bg: rgb(113, 28, 28);
+}
+
+.auth-header-img {
+    width: 10%;
+    margin: auto 3px;
+}

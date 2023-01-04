@@ -25,7 +25,7 @@ const auth = getAuth();
 //Return instance of your app's FRD
 const db = getDatabase(app);
 
-// ---------------- Register New Uswer --------------------------------//
+// ---------------- Register New User --------------------------------//
 document.getElementById('submitData').onclick = function(){
   const firstName = document.getElementById('firstName').value;
   const lastName = document.getElementById('lastName').value;
