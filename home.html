@@ -68,29 +68,16 @@
         
         <div class="container dataForm mb-5">
             <form>
-                <select class="form-select mb-3" aria-label="Default select example" id="trial">
-                    <option selected>Trial #</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
+                <input type="text" class="form-control mb-3" placeholder="Organization Name" id="org">  
+                <input type="text" class="form-control mb-3" placeholder="Team Name" id="name">
+                <select class="form-select mb-3" aria-label="Default select example" id="base">
+                    <option selected>Drive Base</option>
+                    <option value="tank">Tank</option>
+                    <option value="X">X</option>
+                    <option value="H">H</option>
                 </select>
-                <select class="form-select mb-3" aria-label="Default select example" id="extract">
-                    <option selected>Extract</option>
-                    <option value="Control">Control</option>
-                    <option value="Coneflower Premade">Coneflower Premade</option>
-                    <option value="Coneflower Homemade">Coneflower Homemade</option>
-                    <option value="Oregano Premade">Oregano Premade</option>
-                    <option value="Oregano Homemade">Oregano Homemade</option>
-                    <option value="Soap">Soap</option>
-                </select>
-                                
-                <input type="text" class="form-control mb-3" placeholder="Inhibition Zone Diameter" id="diameter">
-                <button type = "button" id="set" name="set" class="btn btn-outline-primary mb-3 w-100">Set</button>
-                <button type = "button" id="update" name="update" class="btn btn-outline-secondary mb-3 w-100">Update</button>
+                <!--button type = "button" id="set" name="set" class="btn btn-outline-primary mb-3 w-100">Set</button>-->
+                <button type = "button" id="update" name="update" class="btn btn-outline-primary mb-3 w-100">Start</button>
             </form>       
         </div>
     </div>

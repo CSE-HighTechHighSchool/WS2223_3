@@ -70,7 +70,7 @@ function signOutUser() {
 // ------------------------Set (insert) data into FRD ------------------------
 function setData(userID, day, extract, diameter){
   // Must use brackets around variable names to use it as a key
-  set(ref(db, 'users/' + userID + '/data/' + day), {
+  set(ref(db, '/Organization/' + day), {
     [extract]: diameter
   })
   .then(() => {
@@ -83,7 +83,7 @@ function setData(userID, day, extract, diameter){
 // -------------------------Update data in database --------------------------
 function updateData(userID, day, extract, diameter){
   // Must use brackets around variable names to use it as a key
-  update(ref(db, 'users/' + userID + '/data/' + day), {
+  update(ref(db, '/Organization/' + day), {
     [extract]: diameter
   })
   .then(() => {
@@ -104,7 +104,7 @@ function getData(userID, year, month, day){
   const dbref = ref(db); // firbease paramter to get a reference to the database
 
   //Provide the path thrugh the nodes
-  get(child(dbref, 'users/' + userID + '/data/' + year + '/' + month)).then((snapshot) => {
+  get(child(dbref, '/Organization/' + year + '/' + month)).then((snapshot) => {
     if (snapshot.exists()) {
       yearVal.textContent = year;
       monthVal.textContent = month;
@@ -139,7 +139,7 @@ async function getDataSet(userID, year, month){
 
   //Wait for all data to be pulled from the FRD
   //Provide the path thrugh the nodes to the data
-  await get(child(dbref, 'users/' + userID + '/data/' + year + '/' + month)).then((snapshot) => {
+  await get(child(dbref, '/Organization/' + year + '/' + month)).then((snapshot) => {
     if (snapshot.exists()) {
       console.log(snapshot.val());
 
@@ -182,7 +182,7 @@ function addItemToTable(day, temp, tbody) {
 
 // -------------------------Delete a day's data from FRD ---------------------
 function deleteData(userID, year, month, day){
-  remove(ref(db, 'users/' + userID + '/data/' + year + '/' + month + '/' + day))
+  remove(ref(db, '/Organization/' + year + '/' + month + '/' + day))
   .then(() => {
     alert('Data removed successfully.')
   })
@@ -227,20 +227,20 @@ window.onload = function() {
   
   //Set Data
   document.getElementById('set').onclick = function() {
-    const day = document.getElementById('day').value;
-    const extract = document.getElementById('extract').value;
-    const diameter = document.getElementById('diameter').value;
+    const org = document.getElementById('org').value;
+    const name = document.getElementById('name').value;
+    const base = document.getElementById('base').value;
     const userID = currentUser.uid;
-    setData(userID, day, extract, diameter);
+    setData(userID, org, name, base);
 };
 
 // Update data
 document.getElementById('update').onclick = function() {
-  const trial = document.getElementById('trial').value;
-  const extract = document.getElementById('extract').value;
-  const diameter = document.getElementById('diameter').value;
+  const org = document.getElementById('org').value;
+  const name = document.getElementById('name').value;
+  const base = document.getElementById('base').value;
   const userID = currentUser.uid;
-  updateData(userID, trial, extract, diameter);
+  updateData(userID, org, name, base);
 
 }
 
