@@ -1,7 +1,7 @@
 let categories = {
     'excellence': 12,   // number of awards
     'skills': 11,
-    'champions': 8,
+    'champions': 9,
     'worlds': 5
 }
 let TOTAL_AWARDS = 36;
