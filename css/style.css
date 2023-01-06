@@ -189,6 +189,9 @@ hr{
     color: white;
 }
 
+.bg-secondary:hover {
+    color: #581729;
+}
 /* ----------------- Number Counter Animation for Excellence Awards -----------------*/
 
 @property --num {
