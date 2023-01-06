@@ -59,11 +59,11 @@
     <!--Firebase Data Operations -->
     <!--Set and Update Data-->
     <div class="container border setColor">
-        <br><h2>Set & Update Data</h2><br>
+        <br><h2>Input Data</h2><br>
         <ol class="list-group list-group-numbered notes">
-            <li class="list-group-item border-0 listColor"><strong>Set</strong> - will completely overwrite all of the data stored at the node.</li>
-            <li class="list-group-item border-0 listColor"><strong>Update</strong> - will only replace the fields that have changed at the node, or add new fields if they aren't present</li>
-            <li class="list-group-item border-0 listColor">If you're collecting data from a sensor, you probably want to use update.</li>
+            <!-- <li class="list-group-item border-0 listColor"><strong>Set</strong> - will completely overwrite all of the data stored at the node.</li> -->
+            <li class="list-group-item border-0 listColor"><strong>Input</strong> - will add the inputted information to the database</li>
+            <!-- <li class="list-group-item border-0 listColor">If you're collecting data from a sensor, you probably want to use update.</li> -->
         </ol><br>
         
         <div class="container dataForm mb-5">
@@ -72,12 +72,52 @@
                 <input type="text" class="form-control mb-3" placeholder="Team Name" id="name">
                 <select class="form-select mb-3" aria-label="Default select example" id="base">
                     <option selected>Drive Base</option>
-                    <option value="tank">Tank</option>
+                    <option value="Tank">Tank</option>
                     <option value="X">X</option>
                     <option value="H">H</option>
                 </select>
-                <!--button type = "button" id="set" name="set" class="btn btn-outline-primary mb-3 w-100">Set</button>-->
-                <button type = "button" id="update" name="update" class="btn btn-outline-primary mb-3 w-100">Start</button>
+                <input type="text" class="form-control mb-3" placeholder="RPM" id="rpm">
+                <select class="form-select mb-3" aria-label="Default select example" id="wheelSize">
+                    <option selected>Wheel Size</option>
+                    <option value="2.75">2.75</option>
+                    <option value="3.25">3.25</option>
+                    <option value="4">4</option>
+                </select>
+                <select class="form-select mb-3" aria-label="Default select example" id="wheelType">
+                    <option selected>Wheel Type</option>
+                    <option value="Omni">Omni</option>
+                    <option value="Traction">Traction</option>
+                    <option value="Mecanum">Mecanum</option>
+                </select>
+                <select class="form-select mb-3" aria-label="Default select example" id="shooter">
+                    <option selected>Shooter</option>
+                    <option value="Catapult">Catapult</option>
+                    <option value="Flywheel">Flywheel</option>
+                    <option value="Both">Both</option>
+                    <option value="None">None (Push Bot)</option>
+                </select>
+                <select class="form-select mb-3" aria-label="Default select example" id="roller">
+                    <option selected>Roller</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <input type="text" class="form-control mb-3" placeholder="Expansion (# of strings)" id="expansion">
+                <select class="form-select mb-3" aria-label="Default select example" id="auton">
+                    <option selected>Autononous Route</option>
+                    <option value="Left">Left</option>
+                    <option value="Right">Right</option>
+                    <option value="Both">Both</option>
+                    <option value="None">None (Drive only)</option>
+                </select>
+                <select class="form-select mb-3" aria-label="Default select example" id="awp">
+                    <option selected>Autonomous Win Point</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <input type="text" class="form-control mb-3" placeholder="Additional notes" id="notes">
+                <!-- <button type = "button" id="set" name="set" class="btn btn-outline-primary mb-3 w-100">Set</button> -->
+                <button type = "button" id="update" name="update" class="btn btn-outline-primary mb-3 w-100">Input</button>
+                <button type = "button" id="reset" name="reset" class="btn btn-outline-primary mb-3 w-100">Reset</button>
             </form>       
         </div>
     </div>
