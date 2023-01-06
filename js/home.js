@@ -90,9 +90,90 @@ function signOutUser() {
 //   });
 //  }
 
-// -------------------------Update data in database --------------------------
 
- function inputData(userID, org, name, base, rpm, wheelSize, wheelType, shooter, roller, expansion, auton, awp, notes){
+// Set, Update, Get, Remove Temperature Data
+function hideBox() {
+  document.getElementById('base').style.display = 'none';
+  document.getElementById('rpm').style.display = 'none';
+  document.getElementById('wheelSize').style.display = 'none';
+  document.getElementById('wheelType').style.display = 'none';
+  document.getElementById('shooter').style.display = 'none';
+  document.getElementById('roller').style.display = 'none';
+  document.getElementById('expansion').style.display = 'none';
+  document.getElementById('auton').style.display = 'none';
+  document.getElementById('awp').style.display = 'none';
+  document.getElementById('notes').style.display = 'none';
+  document.getElementById('base-label').style.display = 'none';
+  document.getElementById('rpm-label').style.display = 'none';
+  document.getElementById('wheelSize-label').style.display = 'none';
+  document.getElementById('wheelType-label').style.display = 'none';
+  document.getElementById('shooter-label').style.display = 'none';
+  document.getElementById('roller-label').style.display = 'none';
+  document.getElementById('expansion-label').style.display = 'none';
+  document.getElementById('auton-label').style.display = 'none';
+  document.getElementById('awp-label').style.display = 'none';
+  document.getElementById('notes-label').style.display = 'none';
+}
+
+function unhHideBox() {
+  document.getElementById('base').style.display = 'inline-block';
+  document.getElementById('rpm').style.display = 'inline-block';
+  document.getElementById('wheelSize').style.display = 'inline-block';
+  document.getElementById('wheelType').style.display = 'inline-block';
+  document.getElementById('shooter').style.display = 'inline-block';
+  document.getElementById('roller').style.display = 'inline-block';
+  document.getElementById('expansion').style.display = 'inline-block';
+  document.getElementById('auton').style.display = 'inline-block';
+  document.getElementById('awp').style.display = 'inline-block';
+  document.getElementById('notes').style.display = 'inline-block';
+  document.getElementById('base-label').style.display = 'inline-block';
+  document.getElementById('rpm-label').style.display = 'inline-block';
+  document.getElementById('wheelSize-label').style.display = 'inline-block';
+  document.getElementById('wheelType-label').style.display = 'inline-block';
+  document.getElementById('shooter-label').style.display = 'inline-block';
+  document.getElementById('roller-label').style.display = 'inline-block';
+  document.getElementById('expansion-label').style.display = 'inline-block';
+  document.getElementById('auton-label').style.display = 'inline-block';
+  document.getElementById('awp-label').style.display = 'inline-block';
+  document.getElementById('notes-label').style.display = 'inline-block';
+}
+
+// ----------------------Get a datum from FRD (single data point)---------------
+async function getData(userID, org, name){
+  const dbref = ref(db); // firebase paramter to get a reference to the database
+
+  //Provide the path thrugh the nodes
+  let data = await get(child(dbref, '/Organization/' + org + '/' + name)).then((snapshot) => {
+    if (snapshot.exists()) {
+      //To fet set of data, use snapshot.val()
+      return snapshot.val();
+    } else {
+      alert("Unsuccessful, error" + error);
+    }
+  })
+  .catch((error) => {
+    alert("Unsuccessful, error" + error);
+  });
+  return data;
+ }
+
+async function loadExistingData(userID, org, name) {
+  let data = await getData(userID, org, name);
+  console.log(data);
+  document.getElementById('base').value = data['Drive Base'];
+  document.getElementById('rpm').value = data['RPM'];
+  document.getElementById('wheelSize').value = data['Wheel Size'];
+  document.getElementById('wheelType').value = data['Wheel Type'];
+  document.getElementById('shooter').value = data['Shooter'];
+  document.getElementById('roller').value = data['Roller'];
+  document.getElementById('expansion').value = data['Expansion'];
+  document.getElementById('auton').value = data['Auton'];
+  document.getElementById('awp').value = data['AWP'];
+  document.getElementById('notes').value = data['Notes'];
+  unhHideBox();
+}
+
+function inputData(userID, org, name, base, rpm, wheelSize, wheelType, shooter, roller, expansion, auton, awp, notes){
   // Must use brackets around variable names to use it as a key
   update(ref(db, '/Organization/' + org  + '/' + name), {
     'Drive Base': base,
@@ -110,35 +191,6 @@ function signOutUser() {
     alert('Data inputted successfully.')
   }).catch((error) => {
     alert('There was an error. Error: ' + error)
-  });
- }
-
-// ----------------------Get a datum from FRD (single data point)---------------
-function getData(userID, year, month, day){
-  
-  let yearVal = document.getElementById('yearVal');
-  let monthVal = document.getElementById('monthVal');
-  let dayVal = document.getElementById('dayVal');
-  let temperatureVal  = document.getElementById('tempVal');
-
-  const dbref = ref(db); // firbease paramter to get a reference to the database
-
-  //Provide the path thrugh the nodes
-  get(child(dbref, '/Organization/' + year + '/' + month)).then((snapshot) => {
-    if (snapshot.exists()) {
-      yearVal.textContent = year;
-      monthVal.textContent = month;
-      dayVal.textContent = day;
-
-      //To fet set of data, use snapshot.val()
-      temperatureVal.textContent = snapshot.val()[day];
-
-    } else {
-      alert("Unsuccessful, error" + error);
-    }
-  })
-  .catch((error) => {
-    alert("Unsuccessful, error" + error);
   });
  }
 
@@ -244,32 +296,6 @@ window.onload = function() {
     }
   } 
 
-  // Set, Update, Get, Remove Temperature Data
-function hideBox() {
-  document.getElementById('base').style.display = 'none';
-  document.getElementById('rpm').style.display = 'none';
-  document.getElementById('wheelSize').style.display = 'none';
-  document.getElementById('wheelType').style.display = 'none';
-  document.getElementById('shooter').style.display = 'none';
-  document.getElementById('roller').style.display = 'none';
-  document.getElementById('expansion').style.display = 'none';
-  document.getElementById('auton').style.display = 'none';
-  document.getElementById('awp').style.display = 'none';
-  document.getElementById('notes').style.display = 'none';
-}
-
-function unhHideBox() {
-  document.getElementById('base').style.display = 'block';
-  document.getElementById('rpm').style.display = 'block';
-  document.getElementById('wheelSize').style.display = 'block';
-  document.getElementById('wheelType').style.display = 'block';
-  document.getElementById('shooter').style.display = 'block';
-  document.getElementById('roller').style.display = 'block';
-  document.getElementById('expansion').style.display = 'block';
-  document.getElementById('auton').style.display = 'block';
-  document.getElementById('awp').style.display = 'block';
-  document.getElementById('notes').style.display = 'block';
-}
   //Set Data
 //   document.getElementById('set').onclick = function() {
 //     const org = document.getElementById('org').value;
@@ -305,12 +331,11 @@ document.getElementById('reset').onclick = function() {
 }
 
 // get a datum
-document.getElementById('get').onclick = function() {
-  const year = document.getElementById('getYear').value;
-  const month = document.getElementById('getMonth').value;
-  const day = document.getElementById('getDay').value;
+document.getElementById('load-existing').onclick = function() {
+  const org = document.getElementById('org').value;
+  const name = document.getElementById('name').value;
   const userID = currentUser.uid;
-  getData(userID, year, month, day);
+  loadExistingData(userID, org, name);
 
 }
 // get a data set
