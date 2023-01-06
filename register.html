@@ -11,7 +11,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel= "stylesheet" href = "css/firebase.css">
+    <link rel="stylesheet" href="css/firebase.css">
 
     <!-- Bootstrap 5, crypto-js and custom JS script tags-->
     <!-- Include 'defer' keyword for each to improve loading-->
@@ -68,17 +68,19 @@
     </nav>
     <div class = 'register overview text-light'>
     <div class="container">
-        <br><h2 class="text-center font">Account Registration</h2><br>
+        <img src="img/logo.png" alt="Fury Logo" class="auth-header-img">
+        <h2 class="text-center font mb-2">Account Registration</h2>
+        <h5 class="text-center font mb-4">for approved users with <a href="https://ctemc.org" class="link-ft">ctemc.org</a> emails</h4>
     </div>
 
     <!--Sign Up -->
-    <div class="signUpForm mb-5">     
-        <form>
+    <div class="signUpForm mb-5 w-25">     
+        <form class="w-100">
             <input type="text" placeholder="First Name" id="firstName" class="form-control mb-3">
             <input type="text" placeholder="Last Name" id="lastName" class="form-control mb-3">
-            <input type="email" placeholder="Email" id="userEmail" class="form-control mb-3">
+            <input type="email" placeholder="Email (example@ctemc.org)" id="userEmail" class="form-control mb-3">
             <input type="password" placeholder="Password" id="userPass" class="form-control mb-3">
-            <button type = "button" id="submitData" name="submitData" class="btn btn-outline-primary mb-3 w-100">Register</button>
+            <button type = "button" id="submitData" name="submitData" class="btn btn-outline-primary btn-ft mb-3 w-100">Register</button>
             <a href="signIn.html" class="badge bg-secondary py-1 w-100">Already have an account?</a>
         </form>
     </div>

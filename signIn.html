@@ -67,19 +67,20 @@
     </nav>
 
 <div class = 'signIn overview text-light'>
-    <div class="container d-flex justify-content-center flex-column">
+    <div class="container">
         <img src="img/logo.png" alt="Fury Logo" class="auth-header-img">
-        <h2 class="text-center font">Sign In</h2>
+        <h2 class="text-center font mb-2">Sign In</h2>
+        <h5 class="text-center font mb-4">to access team information</h4>
     </div>
 
     <!--Sign Up -->
-    <div class="signUpForm">     
-        <form>
-            <input type="email" placeholder="Email" id="loginEmail" class="form-control mb-3">
-            <input type="password" placeholder="Password" id="loginPassword" class="form-control mb-3">
-            <div class="form-check form-switch mb-3">
+    <div class="signUpForm w-25">     
+        <form class="w-100">
+            <input type="email" placeholder="Email (example@ctemc.org)" id="loginEmail" class="form-control mb-3">
+            <input type="password" placeholder="Password (********)" id="loginPassword" class="form-control mb-3">
+            <div class="form-check form-switch mb-3 d-flex justify-content-center gap-2">
                 <input class="form-check-input form-check-ft" type="checkbox" role="switch" id="keepLoggedInSwitch">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Keep me signed in</label>
+                <label class="form-check-label" for="flexSwitchCheckDefault">Stay signed in</label>
             </div>
             <button type = "button" id="signIn" name="signIn" class="btn btn-outline-primary btn-ft mb-3 w-100">Sign In</button>
         </form>

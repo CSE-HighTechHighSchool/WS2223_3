@@ -24,5 +24,14 @@
 
 .auth-header-img {
     width: 10%;
-    margin: auto 3px;
+    margin: 7px auto;
+    display: block;
+}
+
+.link-ft {
+    color: gray;
+}
+
+.link-ft:hover {
+    color: white;
 }
