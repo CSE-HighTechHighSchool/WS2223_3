@@ -102,6 +102,7 @@ function hideBox() {
   document.getElementById('expansion').style.display = 'none';
   document.getElementById('auton').style.display = 'none';
   document.getElementById('awp').style.display = 'none';
+  document.getElementById('ccwm').style.display = 'none';
   document.getElementById('notes').style.display = 'none';
   document.getElementById('base-label').style.display = 'none';
   document.getElementById('rpm-label').style.display = 'none';
@@ -112,6 +113,7 @@ function hideBox() {
   document.getElementById('expansion-label').style.display = 'none';
   document.getElementById('auton-label').style.display = 'none';
   document.getElementById('awp-label').style.display = 'none';
+  document.getElementById('ccwm-label').style.display = 'none';
   document.getElementById('notes-label').style.display = 'none';
 }
 
@@ -125,6 +127,7 @@ function unhHideBox() {
   document.getElementById('expansion').style.display = 'inline-block';
   document.getElementById('auton').style.display = 'inline-block';
   document.getElementById('awp').style.display = 'inline-block';
+  document.getElementById('ccwm').style.display = 'inline-block';
   document.getElementById('notes').style.display = 'inline-block';
   document.getElementById('base-label').style.display = 'inline-block';
   document.getElementById('rpm-label').style.display = 'inline-block';
@@ -135,6 +138,7 @@ function unhHideBox() {
   document.getElementById('expansion-label').style.display = 'inline-block';
   document.getElementById('auton-label').style.display = 'inline-block';
   document.getElementById('awp-label').style.display = 'inline-block';
+  document.getElementById('ccwm-label').style.display = 'inline-block';
   document.getElementById('notes-label').style.display = 'inline-block';
 }
 
@@ -262,6 +266,7 @@ function deleteData(userID, year, month, day){
     alert('There was an error. Error: ' + error)
   })
 }
+
 
 
 // --------------------------- Home Page Loading -----------------------------
