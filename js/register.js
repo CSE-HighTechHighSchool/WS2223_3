@@ -33,7 +33,6 @@ document.getElementById('submitData').onclick = function(){
   const password = document.getElementById('userPass').value;
 
   // Firebase will require a password of at least 6 characters
-  const pass = document.getElementById('userPass').value;
 
   // Validate user inputs
   if(!validation(firstName, lastName, email, password)){
@@ -71,7 +70,6 @@ document.getElementById('submitData').onclick = function(){
 } 
 
 // Password validation
-var myInput = document.getElementById("psw");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
