@@ -30,6 +30,7 @@ const db = getDatabase(app);
 let userLink = document.getElementById('userLink');   // user name for number
 let signOutLink = document.getElementById('signOut'); // sign-out link
 let welcome = document .getElementById('welcome');    // welcome header
+//let resetLink = document.getElementById('reset');     // reset input link
 let currentUser = null;                               // initialize currentUser to null
 
 
@@ -68,26 +69,45 @@ function signOutUser() {
 
 
 // ------------------------Set (insert) data into FRD ------------------------
-function setData(userID, day, extract, diameter){
-  // Must use brackets around variable names to use it as a key
-  set(ref(db, '/Organization/' + day), {
-    [extract]: diameter
-  })
-  .then(() => {
-    alert('Data stored successfully.')
-  }).catch((error) => {
-    alert('There was an error. Error: ' + error)
-  });
- }
+// function setData(userID, org, name, base, rpm, wheelSize, wheelType, shooter, roller, expansion, auton, awp, notes){
+//   // Must use brackets around variable names to use it as a key
+//   set(ref(db, '/Organization/' + org + '/' + name), {
+//     'Drive Base': base,
+//     'RPM': rpm,
+//     'Wheel Size': wheelSize,
+//     'Wheel Type': wheelType,
+//     'Shooter': shooter,
+//     'Roller': roller,
+//     'Expansion': expansion,
+//     'Auton': auton,
+//     'AWP': awp,
+//     'Notes': notes
+//   })
+//   .then(() => {
+//     alert('Data stored successfully.')
+//   }).catch((error) => {
+//     alert('There was an error. Error: ' + error)
+//   });
+//  }
 
 // -------------------------Update data in database --------------------------
-function updateData(userID, day, extract, diameter){
+
+ function inputData(userID, org, name, base, rpm, wheelSize, wheelType, shooter, roller, expansion, auton, awp, notes){
   // Must use brackets around variable names to use it as a key
-  update(ref(db, '/Organization/' + day), {
-    [extract]: diameter
+  update(ref(db, '/Organization/' + org  + '/' + name), {
+    'Drive Base': base,
+    'RPM': rpm,
+    'Wheel Size': wheelSize,
+    'Wheel Type': wheelType,
+    'Shooter': shooter,
+    'Roller': roller,
+    'Expansion': expansion, 
+    'Auton': auton,
+    'AWP': awp,
+    'Notes': notes
   })
   .then(() => {
-    alert('Data updated successfully.')
+    alert('Data inputted successfully.')
   }).catch((error) => {
     alert('There was an error. Error: ' + error)
   });
@@ -196,6 +216,7 @@ function deleteData(userID, year, month, day){
 window.onload = function() {
   // ---------------------------------- Set Welcome Message -------------------------
   getUserName();
+  hideBox();
   if(currentUser == null) {
     userLink.innerHTML = currentUser.name;
     userLink.classList.replace("nav-link", "btn");
@@ -224,24 +245,63 @@ window.onload = function() {
   } 
 
   // Set, Update, Get, Remove Temperature Data
-  
+function hideBox() {
+  document.getElementById('base').style.display = 'none';
+  document.getElementById('rpm').style.display = 'none';
+  document.getElementById('wheelSize').style.display = 'none';
+  document.getElementById('wheelType').style.display = 'none';
+  document.getElementById('shooter').style.display = 'none';
+  document.getElementById('roller').style.display = 'none';
+  document.getElementById('expansion').style.display = 'none';
+  document.getElementById('auton').style.display = 'none';
+  document.getElementById('awp').style.display = 'none';
+  document.getElementById('notes').style.display = 'none';
+}
+
+function unhHideBox() {
+  document.getElementById('base').style.display = 'block';
+  document.getElementById('rpm').style.display = 'block';
+  document.getElementById('wheelSize').style.display = 'block';
+  document.getElementById('wheelType').style.display = 'block';
+  document.getElementById('shooter').style.display = 'block';
+  document.getElementById('roller').style.display = 'block';
+  document.getElementById('expansion').style.display = 'block';
+  document.getElementById('auton').style.display = 'block';
+  document.getElementById('awp').style.display = 'block';
+  document.getElementById('notes').style.display = 'block';
+}
   //Set Data
-  document.getElementById('set').onclick = function() {
-    const org = document.getElementById('org').value;
-    const name = document.getElementById('name').value;
-    const base = document.getElementById('base').value;
-    const userID = currentUser.uid;
-    setData(userID, org, name, base);
-};
+//   document.getElementById('set').onclick = function() {
+//     const org = document.getElementById('org').value;
+//     const name = document.getElementById('name').value;
+//     const base = document.getElementById('base').value;
+//     const userID = currentUser.uid;
+//     setData(userID, org, name, base);
+// };
 
 // Update data
 document.getElementById('update').onclick = function() {
   const org = document.getElementById('org').value;
   const name = document.getElementById('name').value;
+  unhHideBox();
   const base = document.getElementById('base').value;
+  const rpm = document.getElementById('rpm').value;
+  const wheelSize = document.getElementById('wheelSize').value;
+  const wheelType = document.getElementById('wheelType').value;
+  const shooter = document.getElementById('shooter').value;
+  const roller = document.getElementById('roller').value;
+  const expansion = document.getElementById('expansion').value;
+  const auton = document.getElementById('auton').value;
+  const awp = document.getElementById('awp').value;
+  const notes = document.getElementById('notes').value;
   const userID = currentUser.uid;
-  updateData(userID, org, name, base);
+  inputData(userID, org, name, base, rpm, wheelSize, wheelType, shooter, roller, expansion, auton, awp, notes);
+  
 
+}
+
+document.getElementById('reset').onclick = function() {
+  window.location.href = "home.html";
 }
 
 // get a datum
@@ -272,6 +332,9 @@ document.getElementById('delete').onclick = function() {
 
 };
 
+// document.getElementById('reset').onclick = function() {
+//   resetLink.href = "index.html";
+// };
 }
   // ------------------------- Set Welcome Message -------------------------
 
