@@ -143,7 +143,6 @@ function unhHideBox() {
 }
 
 // ----------------------Get a datum from FRD (single data point)---------------
-  });
 
  async function getData(userID, org, name){
   const dbref = ref(db); // firebase paramter to get a reference to the database
