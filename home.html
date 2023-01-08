@@ -11,6 +11,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/firebase.css">
 
     <!-- Bootstrap 5, crypto-js and custom JS script tags-->
     <!-- Include 'defer' keyword for each to improve loading-->
@@ -50,19 +51,20 @@
             </div>
         </div>
     </nav>
+    <div class = 'overview text-light '>
     <div class = 'homeBg'>
-    <div class="container">
+    <div class="container text-center ">
         <br><br>
-        <h1 id = "welcome"></h1><br><br>
+        <h1 style = "font-family: 'Trebuchet MS';" id = "welcome"></h1><br><br>
     </div>
 
     <!--Firebase Data Operations -->
     <!--Set and Update Data-->
-    <div class="container border setColor">
+    <div class="container border overview w-75 homeFont ">
         <br><h2>Input Data</h2><br>
         <ol class="list-group list-group-numbered notes">
             <!-- <li class="list-group-item border-0 listColor"><strong>Set</strong> - will completely overwrite all of the data stored at the node.</li> -->
-            <li class="list-group-item border-0 listColor"><strong>Input</strong> - will add the inputted information to the database</li>
+            <li class="list-group-item border-0 listColor setColor text-light"><strong>Input</strong> - will add the inputted information to the database</li>
             <!-- <li class="list-group-item border-0 listColor">If you're collecting data from a sensor, you probably want to use update.</li> -->
         </ol><br>
         
@@ -128,16 +130,17 @@
                 <label for="notes" id="notes-label">Additional notes</label>
                 <input type="text" class="form-control mb-3" placeholder="Additional notes" id="notes">
                 <!-- <button type = "button" id="set" name="set" class="btn btn-outline-primary mb-3 w-100">Set</button> -->
-                <button type = "button" id="load-existing" name="update" class="btn btn-outline-primary mb-3 w-100">Load Existing Data</button>
-                <button type = "button" id="update" name="update" class="btn btn-outline-primary mb-3 w-100">Update</button>
-                <button type = "button" id="reset" name="reset" class="btn btn-outline-primary mb-3 w-100">Reset</button>
+                <button type = "button" id="load-existing" name="update" class="btn btn-outline-primary btn-ft mb-3 w-100">Load Existing Data</button>
+                <button type = "button" id="update" name="update" class="btn btn-outline-primary btn-ft mb-3 w-100">Update</button>
+                <button type = "button" id="reset" name="reset" class="btn btn-outline-primary btn-ft mb-3 w-100">Reset</button>
             </form>       
         </div>
     </div>
   </div><br>
 
-      <!--Get a data set -->
-      <div class="container border">
+
+      <!-- Get a data set
+      <div class="container border setColor">
         <br><h2>Get a Data Set</h2><br>
         <ol class="list-group list-group-numbered notes">
             <li class="list-group-item border-0">Retrieve an entire month's set of data and display in a table</li>
@@ -172,10 +175,10 @@
         <div>
             <h5 id="setYearVal"></h5>
             <h5 id="setMonthVal"></h5>
-        </div>
+        </div> -->
 
         <!-- Table for displaying data set -->
-        <div class="container">
+        <!-- <div class="container">
             <table class="table">
                 <thead>
                 <tr>
@@ -187,14 +190,14 @@
                 </tbody>
             </table>
         </div>
-    </div><br>  
+    </div><br>   -->
 
   <!--Delete Data-->
-  <div class="container border">
+  <div class="container border homeFont w-75">
       <br><h2>Delete Data</h2><br>
       <ol class="list-group list-group-numbered notes">
-          <li class="list-group-item border-0">This function will allow you to delete a single day's data</li>
-          <li class="list-group-item border-0">To delete an entire month's data, you need to remove modify the directory path removing the 'day' part.</li>
+          <li class="list-group-item border-0 setColor text-light">This function will allow you to delete a single day's data</li>
+          <li class="list-group-item border-0 setColor text-light">To delete an entire month's data, you need to remove modify the directory path removing the 'day' part.</li>
       </ol><br>
       
       <div class="container dataForm mb-5">
@@ -253,10 +256,10 @@
                   <option value="30">30</option>
                   <option value="31">31</option>                                
               </select>
-              <button type = "button" id="delete" name="delete" class="btn btn-outline-primary mb-3 w-100">Delete</button>
+              <button type = "button" id="delete" name="delete" class="btn btn-outline-primary btn-ft mb-3 w-100">Delete</button>
           </form>       
       </div>
   </div><br>
-
+</div>  
 </body>
 </html>

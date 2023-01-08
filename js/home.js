@@ -54,7 +54,7 @@ function signOutUser() {
 
   signOut(auth, db).then(() => {
     // Sign-out successful.
-    window.location.href = 'index.html';
+    window.location.href = 'register.html';
   }).catch((error) => {
     // An error happened.
     console.log(error);
@@ -161,8 +161,26 @@ async function getData(userID, org, name){
   return data;
  }
 
+ async function getLoadData(userID, org, name){
+  const dbref = ref(db); // firebase paramter to get a reference to the database
+
+  //Provide the path thrugh the nodes
+  let data = await get(child(dbref, '/Organization/' + org + '/' + name)).then((snapshot) => {
+    if (snapshot.exists()) {
+      //To fet set of data, use snapshot.val()
+      return snapshot.val();
+    } else {
+      alert("This team has no information inputted. Please update information before loading.");
+    }
+  })
+  .catch((error) => {
+    alert("Unsuccessful, error" + error);
+  });
+  return data;
+ }
+
 async function loadExistingData(userID, org, name) {
-  let data = await getData(userID, org, name);
+  let data = await getLoadData(userID, org, name);
   console.log(data);
   document.getElementById('base').value = data['Drive Base'];
   document.getElementById('rpm').value = data['RPM'];
@@ -173,11 +191,12 @@ async function loadExistingData(userID, org, name) {
   document.getElementById('expansion').value = data['Expansion'];
   document.getElementById('auton').value = data['Auton'];
   document.getElementById('awp').value = data['AWP'];
+  document.getElementById('ccwm').value = data['CCWM'];
   document.getElementById('notes').value = data['Notes'];
   unhHideBox();
 }
 
-function inputData(userID, org, name, base, rpm, wheelSize, wheelType, shooter, roller, expansion, auton, awp, notes){
+function inputData(userID, org, name, base, rpm, wheelSize, wheelType, shooter, roller, expansion, auton, awp, ccwm, notes){
   // Must use brackets around variable names to use it as a key
   update(ref(db, '/Organization/' + org  + '/' + name), {
     'Drive Base': base,
@@ -189,6 +208,7 @@ function inputData(userID, org, name, base, rpm, wheelSize, wheelType, shooter, 
     'Expansion': expansion, 
     'Auton': auton,
     'AWP': awp,
+    'CCWM': ccwm,
     'Notes': notes
   })
   .then(() => {
@@ -324,9 +344,10 @@ document.getElementById('update').onclick = function() {
   const expansion = document.getElementById('expansion').value;
   const auton = document.getElementById('auton').value;
   const awp = document.getElementById('awp').value;
+  const ccwm = document.getElementById('ccwm').value;
   const notes = document.getElementById('notes').value;
   const userID = currentUser.uid;
-  inputData(userID, org, name, base, rpm, wheelSize, wheelType, shooter, roller, expansion, auton, awp, notes);
+  inputData(userID, org, name, base, rpm, wheelSize, wheelType, shooter, roller, expansion, auton, awp, ccwm, notes);
   
 
 }

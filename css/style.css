@@ -17,6 +17,10 @@ body, html {
     color: lightcoral;
 }
 
+.homeFont{
+    font-family: 'Garamond', serif;
+}
+
 hr{
     border: 5px solid #000000;
 }
@@ -27,6 +31,10 @@ hr{
 
 .overview{
     background-color: #581729;
+}
+
+.setColor{
+    background-color: #a35d70;
 }
 
 .nav-image{
