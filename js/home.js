@@ -143,25 +143,9 @@ function unhHideBox() {
 }
 
 // ----------------------Get a datum from FRD (single data point)---------------
-async function getData(userID, org, name){
-  const dbref = ref(db); // firebase paramter to get a reference to the database
-
-  //Provide the path thrugh the nodes
-  let data = await get(child(dbref, '/Organization/' + org + '/' + name)).then((snapshot) => {
-    if (snapshot.exists()) {
-      //To fet set of data, use snapshot.val()
-      return snapshot.val();
-    } else {
-      alert("Unsuccessful, error" + error);
-    }
-  })
-  .catch((error) => {
-    alert("Unsuccessful, error" + error);
   });
-  return data;
- }
 
- async function getLoadData(userID, org, name){
+ async function getData(userID, org, name){
   const dbref = ref(db); // firebase paramter to get a reference to the database
 
   //Provide the path thrugh the nodes
@@ -180,7 +164,7 @@ async function getData(userID, org, name){
  }
 
 async function loadExistingData(userID, org, name) {
-  let data = await getLoadData(userID, org, name);
+  let data = await getData(userID, org, name);
   console.log(data);
   document.getElementById('base').value = data['Drive Base'];
   document.getElementById('rpm').value = data['RPM'];
