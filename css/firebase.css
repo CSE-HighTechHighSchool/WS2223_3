@@ -43,3 +43,9 @@
     border-radius: 10%;
     width: 75%;
 }
+
+.member-image {
+    width: 200px;
+    border-radius: 15px;
+    border: black 4px solid;
+}
