@@ -344,6 +344,7 @@ async function getDataSet(userID) {
       tbodyEl
     );
   }
+  document.getElementById('data-table').style.display = 'block';
 
   createChart(teams, scores);
 }
