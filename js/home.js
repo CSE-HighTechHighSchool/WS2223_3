@@ -228,6 +228,16 @@ function createChart(teams, scores) {
     options: {
       responsive: true,                   // Re-size based on screen size
       scales: {                           // x & y axes display options
+        x: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Teams',
+            font: {
+              size: 20
+            },
+          }
+          },
         y: {
           beginAtZero: false,
           title: {
@@ -351,8 +361,8 @@ function addItemToTable(teamData, tbody) {
 
 
 // -------------------------Delete a day's data from FRD ---------------------
-function deleteData(userID, year, month, day) {
-  remove(ref(db, '/Organization/' + year + '/' + month + '/' + day))
+function deleteData(userID, org, name) {
+  remove(ref(db, '/Organization/' + org + '/' + name))
     .then(() => {
       alert('Data removed successfully.')
     })
@@ -430,6 +440,8 @@ window.onload = function () {
     window.location.href = "home.html";
   }
 
+  
+
   // get a datum
   document.getElementById('load-existing').onclick = function () {
     const org = document.getElementById('org').value;
@@ -447,11 +459,10 @@ window.onload = function () {
 
   // Delete a day's data
   document.getElementById('delete').onclick = function () {
-    const year = document.getElementById('delYear').value;
-    const month = document.getElementById('delMonth').value;
-    const day = document.getElementById('delDay').value;
+    const org = document.getElementById('orgDelete').value;
+    const name = document.getElementById('nameDelete').value;
     const userID = currentUser.uid;
-    deleteData(userID, year, month, day);
+    deleteData(userID, org, name);
 
   };
 
