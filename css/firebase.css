@@ -35,3 +35,9 @@
 .link-ft:hover {
     color: white;
 }
+
+.chart {
+    background-color: white;
+    display: none;
+    margin-bottom: 20px;
+}

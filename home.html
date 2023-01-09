@@ -21,6 +21,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" 
             defer integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" 
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+            defer integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="js/home.js" defer></script>
 </head>
 <body>
@@ -137,93 +140,46 @@
     <br>
 
 
-      <!-- Get a data set
-      <div class="container border setColor">
-        <br><h2>Get a Data Set</h2><br>
+      <!--Get a data set-->
+      <div class="container border showcasebg homeFont w-75">
+        <br><h2 style = "font-family: 'Lucida Sans';" class="text-center">Get the Data Set</h2><br>
         <ol class="list-group list-group-numbered notes">
-            <li class="list-group-item border-0">This function will allow you to delete a single day's data</li>
-            <li class="list-group-item border-0">To delete an entire month's data, you need to remove modify the directory path removing the 'day' part.</li>
+            <li class="list-group-item border-0 listColor setColor text-light">This function will allow you to view a table of all teams and their data</li>
         </ol><br>
         
         <div class="container dataForm mb-5">
             <form>
-                <select class="form-select mb-3" aria-label="Default select example" id="delYear">
-                    <option selected>Trial (Year)</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                </select>
-                <select class="form-select mb-3" aria-label="Default select example" id="delMonth">
-                    <option selected>Month</option>
-                    <option value="Jan">Jan</option>
-                    <option value="Feb">Feb</option>
-                    <option value="Mar">Mar</option>
-                    <option value="Apr">Apr</option>
-                    <option value="May">May</option>
-                    <option value="Jun">Jun</option>
-                    <option value="Jul">Jul</option>
-                    <option value="Aug">Aug</option>
-                    <option value="Sep">Sep</option>
-                    <option value="Oct">Oct</option>
-                    <option value="Nov">Nov</option>
-                    <option value="Dec">Dec</option>
-                </select>
-                <select class="form-select mb-3" aria-label="Default select example" id="delDay">
-                    <option selected>Day</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>                                
-                </select>
-                <button type = "button" id="delete" name="delete" class="btn btn-outline-primary mb-3 w-100">Delete</button>
+                <button type = "button" id="get-dataset" name="get-dataset" class="btn btn-outline-primary btn-ft mb-3 w-100">Get</button>
             </form>       
         </div>
 
-        <div>
-            <h5 id="setYearVal"></h5>
-            <h5 id="setMonthVal"></h5>
-        </div> -->
-
         <!-- Table for displaying data set -->
-        <!-- <div class="container">
-            <table class="table">
+        <div class="container">
+            <table class="table text-light">
                 <thead>
                 <tr>
-                    <th scope="col">Day</th>
-                    <th scope="col">Temperature (°F)</th>
+                    <th scope="col">Team</th>
+                    <th scope="col"><abbr title="Drive Base">Base</abbr></th>
+                    <th scope="col"><abbr title="Drive Revolutions per Minute">RPM</abbr></th>
+                    <th scope="col"><abbr title="Wheel Size">WhlSz</abbr></th>
+                    <th scope="col"><abbr title="Wheel Type">WhlTp</abbr></th>
+                    <th scope="col"><abbr title="Shooter Type">Shooter</abbr></th>
+                    <th scope="col">Roller</th>
+                    <th scope="col"><abbr title="Expansion Strings">Exp</abbr></th>
+                    <th scope="col"><abbr title="Autonomous Route">Auton</abbr></th>
+                    <th scope="col"><abbr title="Autonomous Win Point">AWP</abbr></th>
+                    <th scope="col"><abbr title="Calculated Contribution to Winning Margin">CCWM</abbr></th>
+                    <th scope="col">Score</th>
+                    <th scope="col">Notes</th>
                 </tr>
                 </thead>
                 <tbody id = "tbody-2">
                 </tbody>
             </table>
+
+            <canvas id="scores-chart" class="chart"></canvas>
         </div>
-    </div><br>   -->
+    </div><br>
 
   <!--Delete Data-->
   <div class="container border showcasebg homeFont w-75">
