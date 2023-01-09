@@ -37,8 +37,9 @@
 }
 
 .chart {
-    background-color: white;
+    background-color: rgb(211, 183, 183);
     display: none;
     margin-bottom: 20px;
     border-radius: 10%;
+    width: 75%;
 }
