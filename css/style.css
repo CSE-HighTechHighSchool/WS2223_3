@@ -148,6 +148,7 @@ hr{
 }
 
 
+
 /* ----------------- Number Counter Animation for Excellence Awards -----------------*/
 
 .number::after {
@@ -456,6 +457,24 @@ h1 span.badge {
     }
 }
 
+.new-nav {
+    white-space: nowrap;
+}
 
 
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+  
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+  
 

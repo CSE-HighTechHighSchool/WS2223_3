@@ -8,6 +8,10 @@
     background-color:rgb(113, 28, 28)
 }
 
+.btn-ft:focus {
+    background-color:rgb(113, 28, 28)
+}
+
 .form-check-ft {
     background-color: rgb(167, 64, 64);
 }
