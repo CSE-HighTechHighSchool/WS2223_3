@@ -53,3 +53,16 @@
     border-radius: 15px;
     border: black 4px solid;
 }
+
+.pwd-val-ft {
+    background-color: rgb(255, 155, 155);
+    border-radius: 10px;
+}
+
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
+}
