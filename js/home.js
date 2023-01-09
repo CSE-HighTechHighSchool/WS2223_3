@@ -30,6 +30,7 @@ const db = getDatabase(app);
 let userLink = document.getElementById('userLink');   // user name for number
 let signOutLink = document.getElementById('signOut'); // sign-out link
 let welcome = document.getElementById('welcome');    // welcome header
+let memberPhoto = document.getElementById('member-photo');  // member image
 //let resetLink = document.getElementById('reset');     // reset input link
 let currentUser = null;                               // initialize currentUser to null
 
@@ -343,6 +344,7 @@ async function getDataSet(userID) {
       tbodyEl
     );
   }
+  document.getElementById('data-table').style.display = 'block';
 
   createChart(teams, scores);
 }
@@ -380,6 +382,9 @@ window.onload = function () {
   getUserName();
   hideBox();
   if (currentUser == null) {
+    memberPhoto.src = 'img/logo.png';
+    welcome.innerText = '';
+
     userLink.innerHTML = currentUser.name;
     userLink.classList.replace("nav-link", "btn");
     userLink.classList.add("btn-primary");
@@ -394,6 +399,11 @@ window.onload = function () {
   else {
     userLink.innerText = currentUser.firstName;
     welcome.innerText = `Welcome ${currentUser.firstName}`;
+    if (currentUser.photoFilename) {
+      memberPhoto.src = 'img/' + currentUser.photoFilename;
+    } else {
+      memberPhoto.src = 'img/logo.png';
+    }
     userLink.classList.replace("btn", "nav-link");
     userLink.classList.add("btn-primary");
     userLink.href = "#";
