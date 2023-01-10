@@ -470,7 +470,7 @@ h1 span.badge {
 .valid:before {
     position: relative;
     left: -35px;
-    content: "&#10004;";
+    content: "✓";
 }
   
   /* Add a red text color and an "x" icon when the requirements are wrong */
@@ -481,7 +481,7 @@ h1 span.badge {
 .invalid:before {
     position: relative;
     left: -35px;
-    content: "&#10006;";
+    content: "X";
 }
 
 #message {
