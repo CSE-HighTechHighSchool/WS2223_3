@@ -54,15 +54,40 @@
     border: black 4px solid;
 }
 
-.pwd-val-ft {
-    background-color: rgb(255, 155, 155);
-    border-radius: 10px;
-}
-
 .valid {
-    color: green;
+    color: rgb(201, 255, 205);
 }
 
 .invalid {
-    color: red;
+    color: rgb(255, 213, 213);
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✓";
+}
+  
+/* Add a red text color and an "x" icon when the requirements are wrong */
+  
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "X";
+}
+
+#message {
+    display:none;
+    background-color: #470d0d;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+  
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
 }
