@@ -416,15 +416,6 @@ window.onload = function () {
     }
   }
 
-  //Set Data
-  //   document.getElementById('set').onclick = function() {
-  //     const org = document.getElementById('org').value;
-  //     const name = document.getElementById('name').value;
-  //     const base = document.getElementById('base').value;
-  //     const userID = currentUser.uid;
-  //     setData(userID, org, name, base);
-  // };
-
   // Update data
   document.getElementById('update').onclick = function () {
     const org = document.getElementById('org').value;
@@ -447,14 +438,14 @@ window.onload = function () {
 
   }
 
-  document.getElementById('reset').onclick = function () {
+  document.getElementById('reset').onclick = function () {    //Resets the page once data has been inputted 
     window.location.href = "home.html";
   }
 
   
 
   // get a datum
-  document.getElementById('load-existing').onclick = function () {
+  document.getElementById('load-existing').onclick = function () {   //Loads the existing data
     const org = document.getElementById('org').value;
     const name = document.getElementById('name').value;
     const userID = currentUser.uid;
@@ -462,39 +453,18 @@ window.onload = function () {
 
   }
   // get a data set
-  document.getElementById('get-dataset').onclick = function () {
+  document.getElementById('get-dataset').onclick = function () {  //Gets a dataset from the database so that it can be displayed
     const userID = currentUser.uid;
     getDataSet(userID);
   };
 
 
   // Delete a day's data
-  document.getElementById('delete').onclick = function () {
+  document.getElementById('delete').onclick = function () {   //Deletes a data point from the firebase
     const org = document.getElementById('orgDelete').value;
     const name = document.getElementById('nameDelete').value;
     const userID = currentUser.uid;
     deleteData(userID, org, name);
 
   };
-
-  // document.getElementById('reset').onclick = function() {
-  //   resetLink.href = "index.html";
-  // };
 }
-  // ------------------------- Set Welcome Message -------------------------
-
-
-  // Get, Set, Update, Delete Sharkriver Temp. Data in FRD
-  // Set (Insert) data function call
-
-
-  // Update data function call
-
-
-  // Get a datum function call
-
-
-  // Get a data set function call
-
-
-  // Delete a single day's data function call
