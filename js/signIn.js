@@ -101,6 +101,3 @@ function logIn(user){
     }
 }
 
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
