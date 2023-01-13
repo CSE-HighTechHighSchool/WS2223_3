@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Registration</title>
+
+    <!-- Bootstrap 5 CSS, Icons and custom CSS file links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/firebase.css">
+
+    <!-- Bootstrap 5, crypto-js and custom JS script tags-->
+    <!-- Include 'defer' keyword for each to improve loading-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" 
+            defer integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" 
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" 
+            defer integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="js/register.js" defer></script>
+</head>
+
+<body>
+    <nav class="nb-bg-color navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+              <img src="img/logo.png" alt="Fury Logo" class="img-fluid d-inline-block nav-image">
+            </a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"> 
+              <span class="navbar-toggler-icon"> </span>
+            </button>
+
+
+            <!-- Collapsible navbar menu -->
+            <div class="collapse navbar-collapse " id="navmenu">
+              <ul class="navbar-nav ms-auto new-nav">
+                  <li class="nav-item dropdown shift drop-hover">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      About the Teams
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item shift" href="765A.html">765A</a>
+                      <a class="dropdown-item shift" href="765X.html">765X</a>
+                      <a class="dropdown-item shift" href="765N.html">765N</a>
+                    </div>
+                  </li>
+                  <li class="nav-item shift">
+                      <a href="game.html" class="nav-link" id="nBMenuItem">About VRC Spin Up</a>
+                  </li>
+                  <li class="nav-item shift">
+                      <a href="results.html" class="nav-link" id="nBMenuItem">Team Results</a>
+                  </li>
+                  <li class="nav-item shift">
+                    <a href="states.html" class="nav-link" id="nBMenuItem">State Championship</a>
+                  </li>
+                  <li class="nav-item shift">
+                    <a href="register.html" class="nav-link border" id="nBMenuItem">Sign Up</a>
+                  </li>
+                  <li class="nav-item shift">
+                    <a href="signIn.html" class="nav-link" id="nBMenuItem">Sign In</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+    </nav>
+    <section class = 'registeSection'>
+    <div class = 'register overview text-light'>
+    <div class="container">
+        <img src="img/logo.png" alt="Fury Logo" class="auth-header-img">
+        <h2 class="text-center font mb-2">Account Registration</h2>
+        <h5 class="text-center font mb-4">for approved users with <a href="https://ctemc.org" class="link-ft">ctemc.org</a> emails</h4>
+    </div>
+
+    <!--Sign Up -->
+    <div class="signUpForm mb-5 w-25">     
+        <form class="w-100">
+            <input type="text" placeholder="First Name" id="firstName" class="form-control mb-3" required>
+            <input type="text" placeholder="Last Name" id="lastName" class="form-control mb-3" required>
+            <input type="email" placeholder="Email (example@ctemc.org)" id="userEmail" class="form-control mb-3" required>
+            <!--  <input type="password" placeholder="Password" id="userPass" class="form-control mb-3" required> -->
+            <input type="password" id="userPass" name="userPass" placeholder="Password" class="form-control mb-3" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            <button type = "button" id="submitData" name="submitData" class="btn btn-outline-primary btn-ft mb-3 w-100">Register</button>
+            <a href="signIn.html" class="badge bg-secondary py-1 w-100">Already have an account?</a>
+        </form>
+    </div>
+    <div id="message" class="pwd-val-ft">
+      <h3 class="text-light">Password must contain the following:</h3>
+      <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+      <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+      <p id="number" class="invalid">A <b>number</b></p>
+      <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+    </div>
+  </section>
+    <!-- Footer -->
+    <footer class="p-5 footer text-light text-center position-relative">
+    <div class="container">
+      <p class="lead">Copyright &copy; 765 FuryTech</p>
+      <a href="#" class="position-fixed bottom-0 end-0 p-5">
+        <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+      crossorigin="anonymous"></script>
+  </body>
+ 
+  </html>

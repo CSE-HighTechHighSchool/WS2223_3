@@ -14,22 +14,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <nav class="nb-bg-color navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a href="index.html" class="navbar-brand">
-              <img src="img/logo.png" alt="Fury Logo" class="img-fluid d-inline-block nav-image">
-            </a>
-            
-            <!-- Hamburger Menu Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"> 
-              <span class="navbar-toggler-icon"> </span>
-            </button>
+  <nav class="nb-bg-color navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img src="img/logo.png" alt="Fury Logo" class="img-fluid d-inline-block nav-image">
+        </a>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"> 
+          <span class="navbar-toggler-icon"> </span>
+        </button>
 
 
         <!-- Collapsible navbar menu -->
-        <div class="collapse navbar-collapse" id="navmenu">
-          <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
+        <div class="collapse navbar-collapse " id="navmenu">
+          <ul class="navbar-nav ms-auto new-nav">
+              <li class="nav-item dropdown shift drop-hover">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   About the Teams
                 </a>
@@ -43,12 +43,21 @@
                   <a href="game.html" class="nav-link" id="nBMenuItem">About VRC Spin Up</a>
               </li>
               <li class="nav-item shift">
-                  <a href="results.html" class="nav-link border" id="nBMenuItem ">Team Results</a>
+                  <a href="results.html" class="nav-link border" id="nBMenuItem">Team Results</a>
               </li>
+              <li class="nav-item shift">
+                <a href="states.html" class="nav-link" id="nBMenuItem">State Championship</a>
+              </li>
+              <li class="nav-item shift">
+                <a href="register.html" class="nav-link" id="nBMenuItem">Sign Up</a>
+              </li> 
+              <li class="nav-item shift">
+                <a href="signIn.html" class="nav-link" id="nBMenuItem">Sign In</a>
+            </li>
           </ul>
       </div>
     </div>
-  </nav>
+</nav>
 
     <section class="overview p-2 text-light">
       <div class="container">
@@ -87,13 +96,32 @@
             </div>
           </div>
         </div>
-
         <hr>
+
+        <!-- Narrative on Millburn Spin Up results -->
+        <div class="row text-right">
+          <div class="col-6">
+            <img src="img/765Nmillburnwin.jpg" alt="765N Millburn Win" class="img-fluid d-inline-block results-image">
+            <figcaption class="states-caption p-2"><strong>Picture of 765N and 2616W after winning Millburn Regional Competition</strong></figcaption>
+          </div>
+          <div class="col-6">
+            <h1 class="underline" style = "font-family: 'Times New Roman';"><strong>Spin Up Millburn Results</strong></h1>
+            <p class="results-text" style = "font-family: 'serif';">
+              At New Jersey's first regional competition at Millburn Saturday Showdown, 765N and 2616W won the tournament, beating out the double Millburn teams 7405N and 7405K. 
+              2616W ended up winning the Skills Champion award with their catapult, and 765N used their flywheel to help score discs. 765X allianced with 4610V and lost in the semifinals to double Millburn. 
+              765A qualified for the elimination round, choosing 4610E as their alliance partner after declining 4610X's alliance offer. Unfortunately, they lost in the round of 16 to 30A and 30B. 
+              Everyone had a great time at Millburn's Saturday Showdown, and we are looking forward to the next regional competition!
+            </p>
+          </div>
+        </div>  
+
+        <hr> 
+
         <!-- Narrative on Tipping Point results -->
         <div class="row text-left">
           <div class="col-6">
-            <h1 class="underline">Tipping Point Team Results</h1>
-            <p class="results-text">
+            <h1 class="underline" style = "font-family: 'Times New Roman';"><strong>Tipping Point Team Results</strong></h1>
+            <p class="results-text" style = "font-family: 'serif';">
               High Tech's VEX teams have historically been high-performing in New Jersey and nationally.
               During the 2021-2022 Tipping Point season, all three teams &ndash; 765A, 765X, and 765N &ndash; qualified for the state championship tournament, with 765X triple qualifying.
               765A and 765X then placed as Tournament Finalists during the state competition, earning them both a trip to Dallas, TX for the VEX Robotics World Championship in May.
@@ -104,6 +132,7 @@
           </div>
           <div class="col-6">
             <img src="img/divisionfinalist.jpg" alt="Division Finalists" class="img-fluid d-inline-block results-image">
+            <figcaption class="states-caption p-2"><strong>Picture of 2021-2022 765X members</strong></figcaption>
           </div>
         </div>
       </div>

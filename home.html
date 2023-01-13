@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- Bootstrap 5 CSS, Icons and custom CSS file links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/firebase.css">
+
+    <!-- Bootstrap 5, crypto-js and custom JS script tags-->
+    <!-- Include 'defer' keyword for each to improve loading-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" 
+            defer integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" 
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" 
+            defer integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+            defer integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="js/home.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark nb-bg-color">
+        <!-- lg = large breakpoint, headerBG = custom css BG color -->
+        <div class="container"> <!-- Container will contain content in certain space in middle of page -->
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo.png" alt="Built wtih Firebase" class="img-fluid nav-image d-inline-block align-text-top">
+            </a>
+
+            <!-- Hamburger Menu Button-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible navbar menu with custom hover underline CSS animation -->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <!-- Links to hamburger menu button -->
+                <ul class="navbar-nav ms-auto new-nav justify-content-end nav-fill">
+                    <li class="nav-item dropdown shift drop-hover">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          About the Teams
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item shift" href="765A.html">765A</a>
+                          <a class="dropdown-item shift" href="765X.html">765X</a>
+                          <a class="dropdown-item shift" href="765N.html">765N</a>
+                        </div>
+                      </li>
+                      <li class="nav-item shift new-nav">
+                          <a href="game.html" class="nav-link" id="nBMenuItem">About VRC Spin Up</a>
+                      </li>
+                      <li class="nav-item shift">
+                          <a href="results.html" class="nav-link" id="nBMenuItem">Team Results</a>
+                      </li>
+                      <li class="nav-item shift new-nav">
+                        <a href="states.html" class="nav-link" id="nBMenuItem">State Championship</a>
+                      </li>
+                    <li class="nav-item shift new-nav">
+                        <a  id="userLink" class="nav-link" href="">User Name</a>
+                    </li>
+                    <li class="nav-item shift new-nav">
+                        <a  id="signOut" class="nav-link" href="">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="showcasebg overview text-light">
+        <div class="container">
+            <div class = 'row'>
+                <div class = 'col-15 text-center'>
+                    <img src="img/logo.png" alt="" class="img-fluid nav-image d-inline-block center my-2 member-image" id="member-photo">
+                </div>
+                <div class = 'col'>
+                    <h1 class = 'text-center col' style = "font-family: 'Trebuchet MS';" id = "welcome"></h1>
+                </div>
+            <br><br>
+            </div>
+        </div>
+        <!--Firebase Data Operations -->
+        <!--Set and Update Data-->
+        <div class="container border w-75 homeFont">
+            <br><h2 class = 'text-center' style = "font-family: 'Lucida Sans';" >Input Team Data</h2><br>
+            <ol class="list-group list-group-numbered notes">
+                <!-- <li class="list-group-item border-0 listColor"><strong>Set</strong> - will completely overwrite all of the data stored at the node.</li> -->
+                <li class="list-group-item border-0 listColor setColor text-light"><strong>Input</strong> - will add the inputted information to the database</li>
+                <!-- <li class="list-group-item border-0 listColor">If you're collecting data from a sensor, you probably want to use update.</li> -->
+            </ol><br>
+            <!--Input data for each team-->
+            <div class="container dataForm mb-5">
+                <form>
+                    <input type="text" class="form-control mb-3" placeholder="Organization Name" id="org">  
+                    <input type="text" class="form-control mb-3" placeholder="Team Name" id="name">
+                    <label for="base" id="base-label">Drive Base</label>
+                    <select class="form-select mb-3" aria-label="Default select example" id="base">
+                        <option selected>Drive Base</option>
+                        <option value="Tank">Tank</option>
+                        <option value="X">X</option>
+                        <option value="H">H</option>
+                    </select>
+                    <label for="rpm" id="rpm-label">RPM</label>
+                    <input type="number" class="form-control mb-3" placeholder="RPM" id="rpm">
+                    <label for="wheelSize" id="wheelSize-label">Wheel Size</label>
+                    <select class="form-select mb-3" aria-label="Default select example" id="wheelSize">
+                        <option selected>Wheel Size</option>
+                        <option value="2.75">2.75</option>
+                        <option value="3.25">3.25</option>
+                        <option value="4">4</option>
+                    </select>
+                    <label for="wheelType" id="wheelType-label">Wheel Type</label>
+                    <select class="form-select mb-3" aria-label="Default select example" id="wheelType">
+                        <option selected>Wheel Type</option>
+                        <option value="Omni">Omni</option>
+                        <option value="Traction">Traction</option>
+                        <option value="Mecanum">Mecanum</option>
+                    </select>
+                    <label for="shooter" id="shooter-label">Shooter</label>
+                    <select class="form-select mb-3" aria-label="Default select example" id="shooter">
+                        <option selected>Shooter</option>
+                        <option value="Catapult">Catapult</option>
+                        <option value="Flywheel">Flywheel</option>
+                        <option value="Both">Both</option>
+                        <option value="None">None (Push Bot)</option>
+                    </select>
+                    <label for="roller" id="roller-label">Roller</label>
+                    <select class="form-select mb-3" aria-label="Default select example" id="roller">
+                        <option selected>Roller</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    <label for="expansion" id="expansion-label">Expansion</label>
+                    <input type="number" class="form-control mb-3" placeholder="Expansion (# of strings)" id="expansion">
+                    <label for="auton" id="auton-label">Autonomous Route</label>
+                    <select class="form-select mb-3" aria-label="Default select example" id="auton">
+                        <option selected>Autononous Route</option>
+                        <option value="Left">Left</option>
+                        <option value="Right">Right</option>
+                        <option value="Both">Both</option>
+                        <option value="None">None (Drive only)</option>
+                    </select>
+                    <label for="awp" id="awp-label">AWP</label>
+                    <select class="form-select mb-3" aria-label="Default select example" id="awp">
+                        <option selected>Autonomous Win Point</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    <label for="ccwm" id="ccwm-label">Calculated Contribution to Winning Margin</label>
+                    <input type="number" class = 'form-control mb-3' placeholder = 'Calculated Contribution to Winning Margin' id = "ccwm">
+                    <label for="notes" id="notes-label">Additional notes</label>
+                    <input type="text" class="form-control mb-3" placeholder="Additional notes" id="notes">
+                    <!-- <button type = "button" id="set" name="set" class="btn btn-outline-primary mb-3 w-100">Set</button> -->
+                    <button type = "button" id="load-existing" name="update" class="btn btn-outline-primary btn-ft  mb-3 w-100">Load Existing Data</button>
+                    <button type = "button" id="update" name="update" class="btn btn-outline-primary btn-ft mb-3 w-100">Update</button>
+                    <button type = "button" id="reset" name="reset" class="btn btn-outline-primary btn-ft  mb-3 w-100">Reset</button>
+                </form>       
+            </div>
+        </div>
+    <br>
+
+
+      <!--Get a data set-->
+      <div class="container border showcasebg homeFont w-75">
+        <br><h2 style = "font-family: 'Lucida Sans';" class="text-center">Get All Team Data</h2><br>
+        <ol class="list-group list-group-numbered notes">
+            <li class="list-group-item border-0 listColor setColor text-light">This function will allow you to view a table of all teams and their data</li>
+        </ol><br>
+        
+        <div class="container dataForm mb-5">
+            <form>
+                <button type = "button" id="get-dataset" name="get-dataset" class="btn btn-outline-primary btn-ft mb-3 w-100">Get</button>
+            </form>       
+        </div>
+
+        <!-- Table for displaying data set -->
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table text-light" id="data-table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Team</th>
+                        <th scope="col"><abbr title="Drive Base">Base</abbr></th>
+                        <th scope="col"><abbr title="Drive Revolutions per Minute">RPM</abbr></th>
+                        <th scope="col"><abbr title="Wheel Size">WhlSz</abbr></th>
+                        <th scope="col"><abbr title="Wheel Type">WhlTp</abbr></th>
+                        <th scope="col"><abbr title="Shooter Type">Shooter</abbr></th>
+                        <th scope="col">Roller</th>
+                        <th scope="col"><abbr title="Expansion Strings">Exp</abbr></th>
+                        <th scope="col"><abbr title="Autonomous Route">Auton</abbr></th>
+                        <th scope="col"><abbr title="Autonomous Win Point">AWP</abbr></th>
+                        <th scope="col"><abbr title="Calculated Contribution to Winning Margin">CCWM</abbr></th>
+                        <th scope="col">Score</th>
+                        <th scope="col">Notes</th>
+                    </tr>
+                    </thead>
+                    <tbody id = "tbody-2">
+                    </tbody>
+                </table>
+            </div>
+            <!---Add the chart with the scores for each respective team-->
+
+            <canvas id="scores-chart" class="chart"></canvas>
+        </div>
+    </div><br>
+
+  <!--Delete Data-->
+  <div class="container border showcasebg homeFont w-75">
+      <br><h2 class = 'text-center' style = "font-family: 'Lucida Sans';"> Delete Team Data</h2><br>
+      <ol class="list-group list-group-numbered notes">
+          <li class="list-group-item border-0 setColor text-light">This function will allow you to delete a single data point for a specific team</li>
+      </ol><br>
+      
+      <div class="container dataForm mb-5">
+          <form>
+            <input type="text" class="form-control mb-3" placeholder="Organization Name" id="orgDelete">  
+            <input type="text" class="form-control mb-3" placeholder="Team Name" id="nameDelete">
+            <button type = "button" id="delete" name="delete" class="btn btn-outline-primary btn-ft mb-3 w-100">Delete</button>
+          </form>       
+      </div>
+  </div><br>
+  <!-- Footer -->
+  <footer class="p-5 footer text-light text-center position-relative">
+    <div class="container">
+      <p class="lead">Copyright &copy; 765 FuryTech</p>
+      <a href="#" class="position-fixed bottom-0 end-0 p-5">
+        <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+      </a>
+    </div>
+  </footer>
+</div>  
+</body>
+</html>

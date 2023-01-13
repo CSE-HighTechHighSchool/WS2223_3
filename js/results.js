@@ -1,10 +1,10 @@
 let categories = {
     'excellence': 12,   // number of awards
     'skills': 11,
-    'champions': 8,
+    'champions': 9,
     'worlds': 5
 }
-let TOTAL_AWARDS = 36;
+let TOTAL_AWARDS = 37;
 
 let time = 0;
 let cumulativeCount = 0;

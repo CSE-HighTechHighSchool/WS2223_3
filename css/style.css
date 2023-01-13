@@ -17,6 +17,10 @@ body, html {
     color: lightcoral;
 }
 
+.homeFont{
+    font-family: 'Inter', sans-serif;
+}
+
 hr{
     border: 5px solid #000000;
 }
@@ -27,6 +31,10 @@ hr{
 
 .overview{
     background-color: #581729;
+}
+
+.setColor{
+    background-color: #a35d70;
 }
 
 .nav-image{
@@ -47,9 +55,9 @@ hr{
 }
 
 .author-image {
-    height: 30vh;
-    max-height: 40vw;
-    width: 50%;
+    height: 70vh;
+    max-height: 20vw;
+    width: 70%;
     border-radius: 25px;
     overflow: hidden;
     object-fit: cover;
@@ -70,6 +78,33 @@ hr{
     border: 0px;
 }
 
+.border{
+    border: 2px;
+    border-color: #ffffff;
+    border-radius: 10%;
+}
+/*----Firebase Sign in----*/
+.signUpForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register{
+    padding-top: 29px;
+    padding-bottom: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.signIn{
+    padding-top: 99px;
+    padding-bottom: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 /* --------------------- ID CSS ------------------------ */
 .nb-bg-color {
@@ -101,7 +136,7 @@ hr{
 }
 
 .results-text {
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .results-image {
@@ -111,6 +146,8 @@ hr{
 .underline {
     text-decoration: underline;
 }
+
+
 
 /* ----------------- Number Counter Animation for Excellence Awards -----------------*/
 
@@ -152,6 +189,7 @@ hr{
     opacity: 1;
     visibility: visible;
     height: 100%;
+    border-radius: 10px;
 } 
 
 .hover-scale:hover {
@@ -160,6 +198,9 @@ hr{
     color: white;
 }
 
+.bg-secondary:hover {
+    color: #581729;
+}
 /* ----------------- Number Counter Animation for Excellence Awards -----------------*/
 
 @property --num {
@@ -416,6 +457,7 @@ h1 span.badge {
     }
 }
 
-
-
+.new-nav {
+    white-space: nowrap;
+}
 

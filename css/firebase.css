@@ -1,0 +1,97 @@
+.btn-ft {
+    background-color: rgb(167, 64, 64);
+    color: white;
+    border: none;
+}
+
+.btn-ft:hover {
+    background-color:rgb(113, 28, 28)
+}
+
+.btn-ft:focus {
+    background-color:rgb(113, 28, 28)
+}
+
+.form-check-ft {
+    background-color: rgb(167, 64, 64);
+}
+
+.form-check-ft:checked {
+    background-color: rgb(113, 28, 28);
+    border-color: white;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: rgb(167, 64, 64);
+    --bs-btn-active-bg: rgb(113, 28, 28);
+}
+
+.auth-header-img {
+    width: 10%;
+    margin: 7px auto;
+    display: block;
+}
+
+.link-ft {
+    color: gray;
+}
+
+.link-ft:hover {
+    color: white;
+}
+
+.chart {
+    background-color: rgb(211, 183, 183);
+    display: none;
+    margin-bottom: 20px;
+    border-radius: 10%;
+    width: 75%;
+}
+
+.member-image {
+    width: 200px;
+    border-radius: 15px;
+    border: black 4px solid;
+}
+
+.valid {
+    color: rgb(201, 255, 205);
+}
+
+.invalid {
+    color: rgb(255, 213, 213);
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✓";
+}
+  
+/* Add a red text color and an "x" icon when the requirements are wrong */
+  
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "X";
+}
+
+#message {
+    display:none;
+    background-color: #470d0d;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+  
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+#data-table {
+    display: none;
+}
