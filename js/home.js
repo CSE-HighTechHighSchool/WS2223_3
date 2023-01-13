@@ -468,6 +468,3 @@ window.onload = function () {
 
   };
 }
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
