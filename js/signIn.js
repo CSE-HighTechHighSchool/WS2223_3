@@ -100,3 +100,4 @@ function logIn(user){
         window.location = 'home.html'; // Browser redirect to the home page
     }
 }
+
