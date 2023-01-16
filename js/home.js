@@ -55,7 +55,7 @@ function signOutUser() {
 
   signOut(auth, db).then(() => {
     // Sign-out successful.
-    window.location.href = 'signIn.html';
+    window.location.href = 'register.html';
   }).catch((error) => {
     // An error happened.
     console.log(error);
@@ -388,7 +388,7 @@ window.onload = function () {
     userLink.innerHTML = currentUser.name;
     userLink.classList.replace("nav-link", "btn");
     userLink.classList.add("btn-primary");
-    userLink.href = "signIn.html";
+    userLink.href = "register.html";
 
     signOutLink.innerHTML = "Sign In";
     signOutLink.classList.replace("nav-link", "btn");
