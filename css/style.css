@@ -462,5 +462,11 @@ h1 span.badge {
 }
 
 .app-carousel-height {
-    max-height: 50vh;
+    max-height: 80vh;
+}
+
+.caption-background {
+    background-color: black;
+    opacity: 0.8;
+    border: 2px solid white;
 }
