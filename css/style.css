@@ -461,3 +461,6 @@ h1 span.badge {
     white-space: nowrap;
 }
 
+.app-carousel-height {
+    max-height: 50vh;
+}
